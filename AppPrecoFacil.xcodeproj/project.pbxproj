@@ -11,6 +11,8 @@
 		CE36ECB82ABA6C2C00160C98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36ECB72ABA6C2C00160C98 /* ContentView.swift */; };
 		CE36ECBA2ABA6C2D00160C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE36ECB92ABA6C2D00160C98 /* Assets.xcassets */; };
 		CE36ECBD2ABA6C2D00160C98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE36ECBC2ABA6C2D00160C98 /* Preview Assets.xcassets */; };
+		CE38E3C32AC8B01400CB1C70 /* Tela Cadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38E3C22AC8B01400CB1C70 /* Tela Cadastro.swift */; };
+		CE38E3C52AC8B0E700CB1C70 /* Interacao entre telas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38E3C42AC8B0E700CB1C70 /* Interacao entre telas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		CE36ECB72ABA6C2C00160C98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE36ECB92ABA6C2D00160C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE36ECBC2ABA6C2D00160C98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE38E3C22AC8B01400CB1C70 /* Tela Cadastro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tela Cadastro.swift"; sourceTree = "<group>"; };
+		CE38E3C42AC8B0E700CB1C70 /* Interacao entre telas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interacao entre telas.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				CE36ECB52ABA6C2C00160C98 /* AppPrecoFacilApp.swift */,
 				CE36ECB72ABA6C2C00160C98 /* ContentView.swift */,
+				CE38E3C22AC8B01400CB1C70 /* Tela Cadastro.swift */,
+				CE38E3C42AC8B0E700CB1C70 /* Interacao entre telas.swift */,
 				CE36ECB92ABA6C2D00160C98 /* Assets.xcassets */,
 				CE36ECBB2ABA6C2D00160C98 /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				CE36ECB82ABA6C2C00160C98 /* ContentView.swift in Sources */,
 				CE36ECB62ABA6C2C00160C98 /* AppPrecoFacilApp.swift in Sources */,
+				CE38E3C32AC8B01400CB1C70 /* Tela Cadastro.swift in Sources */,
+				CE38E3C52AC8B0E700CB1C70 /* Interacao entre telas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
