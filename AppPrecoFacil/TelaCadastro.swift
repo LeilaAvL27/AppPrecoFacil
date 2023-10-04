@@ -9,8 +9,8 @@ import SwiftUI
 
 struct Tela_Cadastro: View {
     
+    @State var usuario: String = "";
     @State var email: String = "";
-    @State var confirmemail: String = "";
     @State var senha: String = "";
     @State var confirmesenha: String = "";
     
@@ -18,13 +18,13 @@ struct Tela_Cadastro: View {
         ZStack {
             Color.white // cor de fundo da Tela
             
-            Circle() // substituir por um quadrado como o do Figma
+            Rectangle() // substituir por um quadrado como o do Figma
                 .scale(1.7)
                 .foregroundColor(.orange)
-                .frame(width: 600, height: 400) //largura, altura
+                .frame(width: 600, height: 300) //largura, altura
                 .padding(.bottom, 900)
             
-            Text("PREÇO FÁCIL")
+            Text("LOGO")
                 .font(.largeTitle)
                 .bold()
                 .padding(.bottom, 600)
@@ -33,52 +33,56 @@ struct Tela_Cadastro: View {
             Text ("FAÇA SEU CADASTRO")
                 .font(.body)
                 .bold()
-                .padding(.bottom, 200)
+                .padding(.bottom, 320)
                 .foregroundColor(.black)
             
             VStack {
-                TextField("Insira seu usuário", text: $email)
+                TextField("Nome de Usuário", text: $email)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.gray.opacity(0.3))
-                    .cornerRadius(10)
+                    .cornerRadius(30)
                     .border(.gray.opacity(0.05))
-                    .padding(.top, 100)
+                    .padding(.top, 150)
                     .padding(.bottom, 10)
                 
-                TextField("Confirme seu email", text: $email)
+                TextField("Insira seu email", text: $email)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.gray.opacity(0.3))
-                    .cornerRadius(10)
+                    .cornerRadius(30) // grau do arredondamento da borda
                     .border(.gray.opacity(0.05))
-                    .padding(.top, 100)
                     .padding(.bottom, 10)
                 
                 SecureField("Crie uma senha", text: $senha)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.gray.opacity(0.3))
-                    .cornerRadius(10)
+                    .cornerRadius(30)
                     .border(.gray.opacity(0.05))
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 10)
                 
                 SecureField("Confirme sua senha", text: $senha)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.gray.opacity(0.3))
-                    .cornerRadius(10)
+                    .cornerRadius(30)
                     .border(.gray.opacity(0.05))
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 10)
                 
                 
                 Button("Finalizar") {
                     //Realiza alguma ação
                 }
-                .foregroundColor(.red)
-                .frame(width: 300, height: 50)
+                .foregroundColor(.white)
+                .frame(width: 200, height: 50)
                 .background(.black.opacity(0.85))
                 .cornerRadius(10)
+                
+                .padding()
+                Text("OU")
+                    .font(.callout)
+                    .foregroundColor(.black)
                 
             
             }

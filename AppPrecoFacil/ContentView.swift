@@ -8,69 +8,83 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var Usuario: String = ""
+    @State var email: String = ""
     @State var senha: String = ""
     
     var body: some View {
-        ZStack {
-            Color.white // cor de fundo da Tela
+        
+        NavigationView {
             
-            Circle() // substituir por um quadrado como o do Figma
-                .scale(1.7)
-                .foregroundColor(.orange)
-                .frame(width: 600, height: 400) //largura, altura
-                .padding(.bottom, 900)
-            
-            Text("PREÇO FÁCIL")
-                .font(.largeTitle)
-                .bold()
-                .padding(.bottom, 600)
-                .foregroundColor(.yellow)
-            
-            Text ("FAÇA SEU LOGIN")
-                .font(.body)
-                .bold()
-                .padding(.bottom, 200)
-                .foregroundColor(.black)
-            
-            VStack {
-                TextField("Digite seu usuário", text: $Usuario)
-                    .padding()
-                    .frame(width: 300, height: 50)
-                    .background(Color.gray.opacity(0.3))
-                    .cornerRadius(10)
-                    .border(.gray.opacity(0.05))
-                    .padding(.top, 200)
-                    .padding(.bottom, 10)
+            ZStack {
+                Color.white // cor de fundo da Tela
                 
-                SecureField("Digite sua senha", text: $senha)
-                    .padding()
-                    .frame(width: 300, height: 50)
-                    .background(Color.gray.opacity(0.3))
-                    .cornerRadius(10)
-                    .border(.gray.opacity(0.05))
-                    .padding(.bottom, 20)
+                Rectangle()
+                    .scale(1.7)
+                    .foregroundColor(.orange)
+                    .frame(width: 600, height: 350) //largura, altura
+                    .padding(.bottom, 900)
                 
-                Button("Entrar") {
-                    //Realiza alguma ação
-                }
-                .foregroundColor(.white) //texto 
-                .frame(width: 300, height: 50) //fundo
-                .background(.black.opacity(0.85)) //cor fundo
-                .cornerRadius(10) // bordas
+                Text("LOGO")
+                    .font(.largeTitle)
+                    .bold()
+                    .padding(.bottom, 600)
+                    .foregroundColor(.yellow)
                 
-                .padding()
-                Text ("Esqueceu a senha?")
-                    .font(.callout)
-                    .foregroundColor(.blue)
-                    
-                .padding()
-                //NavigationLink(destination: Tela_Cadastro())
-                Text ("Não tem cadastro?")
-                    .font(.callout)
+                Text ("FAÇA SEU LOGIN")
+                    .font(.body)
+                    .bold()
+                    .padding(.bottom, 250)
                     .foregroundColor(.black)
-                    //.padding(.top, 100)
-              
+                
+                VStack {
+                    TextField("Insira seu email", text: $email)
+                        .padding()
+                        .frame(width: 300, height: 50) //Largura, altura
+                        .background(Color.gray.opacity(0.3))
+                        .cornerRadius(30)
+                        .border(.gray.opacity(0.05))
+                        .padding(.top, 150)
+                        .padding(.bottom, 10)
+                    
+                    SecureField("Insira sua senha", text: $senha)
+                        .padding()
+                        .frame(width: 300, height: 50)
+                        .background(Color.gray.opacity(0.3))
+                        .cornerRadius(30)
+                        .border(.gray.opacity(0.05))
+                        .padding(.bottom, 10)
+                    
+                    Button("Entrar") {
+                        //Realiza alguma ação
+                    }
+                    .foregroundColor(.white)
+                    .frame(width: 200, height: 50) //fundo
+                    .background(.black.opacity(0.85)) //cor fundo
+                    .cornerRadius(10)
+                
+                    
+                    .padding()
+                    // NavigationLink(destination: ?????())
+                    Text ("Esqueceu a senha?") //Deixar mais próximo do botão de ENTRAR
+                        .font(.callout)
+                        .foregroundColor(.blue)
+                    //.padding(.bottom, 10)
+    
+                    .padding()
+                    NavigationLink(destination: Tela_Cadastro()) {
+                    Text ("Cadastre-se") // Deixar do lado de ESQUECEU SENHA
+                        .font(.callout)
+                        .foregroundColor(.black)
+                    
+                        
+                    .padding()
+                    Text("OU")
+                        .font(.callout)
+                        .foregroundColor(.black)
+                    //.padding(.top, 50)
+                        
+                    }
+                }
             }
         }
     }
