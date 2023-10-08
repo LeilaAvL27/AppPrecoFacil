@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
             
             ZStack {
                 Color.white // cor de fundo da Tela
@@ -54,35 +54,29 @@ struct ContentView: View {
                         .border(.gray.opacity(0.05))
                         .padding(.bottom, 10)
                     
+                                          
                     Button("Entrar") {
-                        //Realiza alguma ação
+                        // Inserir LINK de navegacao para HOME
                     }
                     .foregroundColor(.white)
                     .frame(width: 200, height: 50) //fundo
                     .background(.black.opacity(0.85)) //cor fundo
                     .cornerRadius(10)
-                
+                    
                     
                     .padding()
-                    // NavigationLink(destination: ?????())
+                    NavigationLink(destination: TelaHome()) {
                     Text ("Esqueceu a senha?") //Deixar mais próximo do botão de ENTRAR
                         .font(.callout)
                         .foregroundColor(.blue)
-                    //.padding(.bottom, 10)
+                    
     
                     .padding()
-                    NavigationLink(destination: Tela_Cadastro()) {
-                    Text ("Cadastre-se") // Deixar do lado de ESQUECEU SENHA
-                        .font(.callout)
-                        .foregroundColor(.black)
-                    
-                        
-                    .padding()
-                    Text("OU")
-                        .font(.callout)
-                        .foregroundColor(.black)
-                    //.padding(.top, 50)
-                        
+                        NavigationLink(destination: Tela_Cadastro()) {
+                            Text ("Cadastre-se") // Deixar do lado de ESQUECEU SENHA
+                                .font(.callout)
+                                .foregroundColor(.black)
+                        }
                     }
                 }
             }

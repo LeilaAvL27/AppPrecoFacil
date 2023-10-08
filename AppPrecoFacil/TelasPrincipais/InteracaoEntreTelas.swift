@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Interacao_entre_telas: View {
+struct InteracaoEntreTelas: View {
     var body: some View {
        
         NavigationView {

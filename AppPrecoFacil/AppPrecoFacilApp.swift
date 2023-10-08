@@ -11,7 +11,7 @@ import SwiftUI
 struct AppPrecoFacilApp: App {
     var body: some Scene {
         WindowGroup {
-            Interacao_entre_telas();
+            InteracaoEntreTelas();
         }
     }
 }
