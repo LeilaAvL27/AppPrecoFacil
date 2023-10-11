@@ -54,18 +54,19 @@ struct ContentView: View {
                         .border(.gray.opacity(0.05))
                         .padding(.bottom, 10)
                     
-                                          
-                    Button("Entrar") {
-                        // Inserir LINK de navegacao para HOME
-                    }
-                    .foregroundColor(.white)
-                    .frame(width: 200, height: 50) //fundo
-                    .background(.black.opacity(0.85)) //cor fundo
-                    .cornerRadius(10)
-                    
-                    
-                    .padding()
                     NavigationLink(destination: TelaHome()) {
+                        VStack {
+                            Text("Entrar")
+                        }
+                                .foregroundColor(.white)
+                                .frame(width: 200, height: 50) //fundo
+                                .background(.black.opacity(0.85)) //cor fundo
+                                .cornerRadius(10)
+                    }
+                    
+        
+                    .padding()
+               //     NavigationLink(destination: ???()) {
                     Text ("Esqueceu a senha?") //Deixar mais próximo do botão de ENTRAR
                         .font(.callout)
                         .foregroundColor(.blue)
@@ -76,7 +77,7 @@ struct ContentView: View {
                             Text ("Cadastre-se") // Deixar do lado de ESQUECEU SENHA
                                 .font(.callout)
                                 .foregroundColor(.black)
-                        }
+                        
                     }
                 }
             }

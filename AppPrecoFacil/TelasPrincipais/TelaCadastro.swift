@@ -71,13 +71,15 @@ struct Tela_Cadastro: View {
                     .padding(.bottom, 10)
                 
                 
-                Button("Finalizar") {
-                    //Realiza alguma ação
+                NavigationLink(destination: TelaHome()) {
+                    VStack {
+                        Text("Entrar")
+                    }
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 50) //fundo
+                            .background(.black.opacity(0.85)) //cor fundo
+                            .cornerRadius(10)
                 }
-                .foregroundColor(.white)
-                .frame(width: 200, height: 50)
-                .background(.black.opacity(0.85))
-                .cornerRadius(10)
                 
                 .padding()
                 Text("OU")

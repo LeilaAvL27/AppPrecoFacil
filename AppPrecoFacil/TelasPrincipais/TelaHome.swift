@@ -10,7 +10,7 @@ import SwiftUI
 struct TelaHome: View {
     var body: some View {
         
-        NavigationStack{
+        VStack{
             
             Text("Tela Home")
             NavigationLink("Ir para perfil", destination: TelaPerfil())
