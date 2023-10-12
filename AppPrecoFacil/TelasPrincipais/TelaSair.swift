@@ -11,9 +11,10 @@ struct TelaSair: View {
     var body: some View {
         
         NavigationStack{
-            
-            Text("SAIR")
-            
+            List{
+           
+                Text("SAIR")
+            }
             }
         }
     }

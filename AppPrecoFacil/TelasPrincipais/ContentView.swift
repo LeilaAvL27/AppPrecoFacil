@@ -58,25 +58,26 @@ struct ContentView: View {
                         VStack {
                             Text("Entrar")
                         }
-                                .foregroundColor(.white)
-                                .frame(width: 200, height: 50) //fundo
-                                .background(.black.opacity(0.85)) //cor fundo
-                                .cornerRadius(10)
+                        .foregroundColor(.white)
+                        .frame(width: 200, height: 50) //fundo
+                        .background(.black.opacity(0.85)) //cor fundo
+                        .cornerRadius(10)
                     }
                     
-        
+                    
                     .padding()
-               //     NavigationLink(destination: ???()) {
+                    //     NavigationLink(destination: ???()) {
                     Text ("Esqueceu a senha?") //Deixar mais próximo do botão de ENTRAR
                         .font(.callout)
                         .foregroundColor(.blue)
                     
-    
-                    .padding()
-                        NavigationLink(destination: Tela_Cadastro()) {
-                            Text ("Cadastre-se") // Deixar do lado de ESQUECEU SENHA
-                                .font(.callout)
-                                .foregroundColor(.black)
+                    
+                        .padding()
+                    NavigationLink(destination: Tela_Cadastro()) {
+                        Text ("Cadastre-se") // Deixar do lado de ESQUECEU SENHA
+                            .font(.callout)
+                            .foregroundColor(.black)
+                        
                         
                     }
                 }

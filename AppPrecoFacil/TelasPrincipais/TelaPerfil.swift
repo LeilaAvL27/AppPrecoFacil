@@ -10,20 +10,35 @@ import SwiftUI
 struct TelaPerfil: View {
     var body: some View {
         
-        
-        
-        VStack{
-            // Definicoes de Foto e nome do Perfil
+        ZStack{
+            // Background Profile
             Rectangle()
-            
                 .ignoresSafeArea()
                 .foregroundColor(.orange)
                 .frame( height: 150) //altura
             
-            
-            List {
-                //VStack (alignment: .leading) {
-                
+            Circle()
+            //.foregroundColor(.gray)
+                .frame(width: 80, height: 80, alignment: .leading)
+                .overlay (
+                    
+                    //image profile
+                    Image("profile")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 80, height: 80, alignment: .leading)
+                        .mask {
+                            Circle()
+                                .frame(width: 80, height: 80, alignment: .leading)
+                        }
+                )
+            Text("Rick Morty")
+                .foregroundColor(.black)
+                .padding(.bottom, 100)
+        }
+        
+        VStack (alignment: .leading) {
+           List {
                 
                 NavigationLink("Principal", destination: TelaHome())
                 NavigationLink("Minha Lista", destination: MyList())

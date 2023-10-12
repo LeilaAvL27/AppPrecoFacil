@@ -13,6 +13,8 @@ struct TelaConfiguracoes: View {
         NavigationStack{
             
             List {
+                navigationTitle("Configurações")
+                
                 Text("Sobre Nós")
                 Text("Política de Privacidade")
                 Text("Termos de Uso")
