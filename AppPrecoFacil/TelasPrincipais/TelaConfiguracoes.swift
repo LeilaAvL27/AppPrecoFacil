@@ -10,8 +10,6 @@ import SwiftUI
 struct TelaConfiguracoes: View {
     var body: some View {
         
-        NavigationStack{
-            
             List {
                 navigationTitle("Configurações")
                 
@@ -23,7 +21,7 @@ struct TelaConfiguracoes: View {
                }
             }
         }
-    }
+
 
 struct TelaConfiguracoes_Previews: PreviewProvider {
     static var previews: some View {

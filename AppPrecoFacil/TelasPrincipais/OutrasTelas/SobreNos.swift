@@ -9,9 +9,31 @@ import SwiftUI
 
 struct SobreNos: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationStack{
+          
+            // List {
+
+            
+                  Image("Logo")
+                      .resizable()
+                      .aspectRatio(contentMode: .fill)
+                      .frame(width: 100, height: 100, alignment: .leading)
+                     // .padding(.bottom,300)
+                  Text("Preço Fácil")
+                      .font(.largeTitle)
+                      .bold()
+                      .foregroundColor(.yellow)
+                  //    .padding(.bottom, 300)
+                  
+                  Text("Inserir texto Sobre Nós aqui")
+                  .padding(.bottom, 400)
+            
+             // }
+            
+           }
+        }
     }
-}
 
 struct SobreNos_Previews: PreviewProvider {
     static var previews: some View {
