@@ -39,9 +39,10 @@ struct TelaPerfil: View {
         
         VStack (alignment: .leading) {
            List {
-                
+                //Alinhar Lista a esquerda da Tela
+               
                 NavigationLink("Principal", destination: TelaHome())
-                NavigationLink("Minha Lista", destination: MyList())
+                NavigationLink("Minha Lista de Compras", destination: MyList())
                 NavigationLink("Mercados Parceiros", destination: TelaMercadosParceiros())
                 NavigationLink("Configurações", destination: TelaConfiguracoes())
                 NavigationLink("Sair", destination: TelaSair())

@@ -20,8 +20,4 @@ struct MyList: View {
         }
     }
 
-struct MyList_Previews: PreviewProvider {
-    static var previews: some View {
-        MyList()
-    }
-}
+

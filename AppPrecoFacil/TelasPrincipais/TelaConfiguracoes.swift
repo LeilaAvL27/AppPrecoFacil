@@ -15,10 +15,10 @@ struct TelaConfiguracoes: View {
             List {
                 navigationTitle("Configurações")
                 
-                Text("Sobre Nós")
-                Text("Política de Privacidade")
-                Text("Termos de Uso")
-                Text("Apagar Conta")
+                NavigationLink("Sobre Nós", destination: SobreNos())
+                NavigationLink("Termos de Uso", destination: TermosUso())
+                NavigationLink("Apagar Conta", destination: ApagarConta())
+             
                 
                }
             }

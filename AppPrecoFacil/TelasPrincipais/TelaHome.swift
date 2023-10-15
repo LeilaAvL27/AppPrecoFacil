@@ -7,15 +7,43 @@
 
 import SwiftUI
 
+
 struct TelaHome: View {
     var body: some View {
-        
-        VStack{
+     //   VStack{
             
+          Text("Tela Home")
+           NavigationLink("Ir para perfil", destination: TelaPerfil())
+            
+     //   }
+        
+        TabView{
             Text("Tela Home")
-            NavigationLink("Ir para perfil", destination: TelaPerfil())
+                .tabItem{
+                    // Image(systemName: )
+                    Text("Home")//nome atalho
+                }
+            
+            MyList()
+                .tabItem{
+                    //Image(systemName: )
+                    Text("Minha Lista")
+                }
+            
+            Text("Pesquisar")
+                .tabItem{
+                    //Image(systemName: )
+                    Text("Pesquisar")
+                }
+            
+            TelaPerfil()
+                .tabItem{
+                    // image(Image(systemName: )
+                    Text("Perfil")
+                }
             
         }
+        
     }
 }
 
