@@ -54,7 +54,7 @@ struct ContentView: View {
                         .border(.gray.opacity(0.05))
                         .padding(.bottom, 10)
                     
-                    NavigationLink(destination: TelaHome()) {
+                    NavigationLink(destination: TabBar()) {
                         VStack {
                             Text("Entrar")
                         }
@@ -74,7 +74,7 @@ struct ContentView: View {
                     
                         .padding()
                     NavigationLink(destination: Tela_Cadastro()) {
-                        Text ("Cadastre-se") // Deixar do lado de ESQUECEU SENHA
+                        Text ("Não tem conta? Cadastre-se") // Deixar do lado de ESQUECEU SENHA
                             .font(.callout)
                             .foregroundColor(.black)
                         

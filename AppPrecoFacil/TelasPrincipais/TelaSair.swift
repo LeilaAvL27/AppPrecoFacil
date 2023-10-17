@@ -14,6 +14,8 @@ struct TelaSair: View {
             List{
            
                 Text("SAIR")
+                  
+                
             }
             }
         }

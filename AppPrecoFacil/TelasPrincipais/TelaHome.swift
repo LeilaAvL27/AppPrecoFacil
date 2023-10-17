@@ -9,40 +9,29 @@ import SwiftUI
 
 
 struct TelaHome: View {
+    
+    @State var field = ""
+    
     var body: some View {
-     //   VStack{
-            
-          Text("Tela Home")
-           NavigationLink("Ir para perfil", destination: TelaPerfil())
-            
-     //   }
         
-        TabView{
+        //barra de pesquisa
+        VStack {
+            //Image(systemName: "")
+            TextField("Pesquise seu produto aqui",
+                      text:$field)
+            .padding()
+            .frame(width: 350, height: 50) //largura , altura
+            .background(Color.gray.opacity(0.3))
+            .cornerRadius(30)
+            .border(.gray.opacity(0.05))
+           // .padding(.bottom, 10)
+            Spacer()
+            
             Text("Tela Home")
-                .tabItem{
-                    // Image(systemName: )
-                    Text("Home")//nome atalho
-                }
-            
-            MyList()
-                .tabItem{
-                    //Image(systemName: )
-                    Text("Minha Lista")
-                }
-            
-            Text("Pesquisar")
-                .tabItem{
-                    //Image(systemName: )
-                    Text("Pesquisar")
-                }
-            
-            TelaPerfil()
-                .tabItem{
-                    // image(Image(systemName: )
-                    Text("Perfil")
-                }
-            
+             NavigationLink("Ir para perfil", destination: TelaPerfil())
+            Spacer()
         }
+
         
     }
 }
