@@ -10,6 +10,7 @@
 		CE01D85C2ADB7203007F2409 /* SobreNos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01D85B2ADB7203007F2409 /* SobreNos.swift */; };
 		CE01D85E2ADB7259007F2409 /* TermosUso.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01D85D2ADB7259007F2409 /* TermosUso.swift */; };
 		CE01D8602ADB726B007F2409 /* ApagarConta.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01D85F2ADB726B007F2409 /* ApagarConta.swift */; };
+		CE350DA52ADF662A00B8630D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE350DA42ADF662A00B8630D /* SearchBar.swift */; };
 		CE36ECB62ABA6C2C00160C98 /* AppPrecoFacilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36ECB52ABA6C2C00160C98 /* AppPrecoFacilApp.swift */; };
 		CE36ECB82ABA6C2C00160C98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36ECB72ABA6C2C00160C98 /* ContentView.swift */; };
 		CE36ECBA2ABA6C2D00160C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE36ECB92ABA6C2D00160C98 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		CE01D85B2ADB7203007F2409 /* SobreNos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreNos.swift; sourceTree = "<group>"; };
 		CE01D85D2ADB7259007F2409 /* TermosUso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermosUso.swift; sourceTree = "<group>"; };
 		CE01D85F2ADB726B007F2409 /* ApagarConta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApagarConta.swift; sourceTree = "<group>"; };
+		CE350DA42ADF662A00B8630D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE36ECB22ABA6C2C00160C98 /* AppPrecoFacil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppPrecoFacil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE36ECB52ABA6C2C00160C98 /* AppPrecoFacilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPrecoFacilApp.swift; sourceTree = "<group>"; };
 		CE36ECB72ABA6C2C00160C98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				CE7BB52A2ADF459C00DC9DFF /* TabBar.swift */,
 				CEF510942AD21FE7000C6010 /* TelaPerfil.swift */,
 				CEF510962AD2238A000C6010 /* TelaPesquisa.swift */,
+				CE350DA42ADF662A00B8630D /* SearchBar.swift */,
 				CEF510982AD2244A000C6010 /* MyList.swift */,
 				CE582FC52AD23982007D4485 /* TelaMercadosParceiros.swift */,
 				CE582FC72AD239A1007D4485 /* TelaConfiguracoes.swift */,
@@ -197,6 +200,7 @@
 				CEF510992AD2244A000C6010 /* MyList.swift in Sources */,
 				CEF510972AD2238A000C6010 /* TelaPesquisa.swift in Sources */,
 				CE36ECB62ABA6C2C00160C98 /* AppPrecoFacilApp.swift in Sources */,
+				CE350DA52ADF662A00B8630D /* SearchBar.swift in Sources */,
 				CE01D85C2ADB7203007F2409 /* SobreNos.swift in Sources */,
 				CE582FC82AD239A1007D4485 /* TelaConfiguracoes.swift in Sources */,
 				CE582FC62AD23982007D4485 /* TelaMercadosParceiros.swift in Sources */,

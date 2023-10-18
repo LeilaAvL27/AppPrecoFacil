@@ -16,8 +16,8 @@ struct MyList: View {
             Text("Minha Lista")
             NavigationLink("Cabou aqui", destination: MyList())
             
-            }
+            
         }
     }
-
-
+    
+}

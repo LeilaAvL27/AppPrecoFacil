@@ -71,7 +71,7 @@ struct Tela_Cadastro: View {
                     .padding(.bottom, 10)
                 
                 
-                NavigationLink(destination: TelaHome()) {
+                NavigationLink(destination: TabBar()) {
                     VStack {
                         Text("Entrar")
                     }
