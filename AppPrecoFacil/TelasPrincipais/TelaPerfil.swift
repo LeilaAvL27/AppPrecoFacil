@@ -15,11 +15,11 @@ struct TelaPerfil: View {
                 Rectangle()
                     .ignoresSafeArea()
                     .foregroundColor(.orange)
-                    .frame( height: 150) //altura
+                    .frame( height: 160) //altura
                 
-                Circle()
-                //.foregroundColor(.gray)
-                    .frame(width: 80, height: 80, alignment: .leading)
+               // Circle()
+               // .foregroundColor(.white)
+               // .frame(width: 81, height: 81, alignment: .leading)
                     .overlay (
                         
                         //image profile

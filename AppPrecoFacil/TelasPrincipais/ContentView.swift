@@ -24,12 +24,31 @@ struct ContentView: View {
                     .frame(width: 600, height: 350) //largura, altura
                     .padding(.bottom, 900)
                 
-                Text("LOGO")
-                    .font(.largeTitle)
-                    .bold()
-                    .padding(.bottom, 600)
-                    .foregroundColor(.yellow)
+                Circle()
+                    .scale(1.7)
+                    .foregroundColor(.white)
+                    .frame(width: 70, height: 70) //largura, altura
+                    .padding(.bottom, 500)
                 
+                VStack {
+                    Image("LogoPreco")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 200, height: 150)
+                        .clipShape(Circle())
+                        .padding(.bottom, 710)
+                }
+                
+                VStack {
+                    Image("LogoLupa")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 97, height: 97)
+                        .clipShape(Circle())
+                        .padding(.bottom, 500) // Ajuste o espaçamento conforme necessário
+                }
+              //  .padding()
+
                 Text ("FAÇA SEU LOGIN")
                     .font(.body)
                     .bold()

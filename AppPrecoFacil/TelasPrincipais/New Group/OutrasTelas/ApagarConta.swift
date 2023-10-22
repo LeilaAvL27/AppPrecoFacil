@@ -1,4 +1,4 @@
-///
+//
 //  ApagarConta.swift
 //  AppPrecoFacil
 //
@@ -18,4 +18,3 @@ struct ApagarConta_Previews: PreviewProvider {
         ApagarConta()
     }
 }
-
