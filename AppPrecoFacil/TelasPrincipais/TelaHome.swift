@@ -29,44 +29,31 @@ struct TelaHome: View {
             
             ZStack(alignment: .topTrailing) {
                 ZStack(alignment: .bottom) {
-                    Image("profile")
+                    Image("maraca")
                         .resizable()
                         .cornerRadius(20)
-                        .frame(width: 130, height: 200)
-                       //.scaledToFit()
+                        .frame(width: 120, height: 160)
+                        .padding(.bottom, 250) // Ajuste o espaçamento conforme necessário
                     
-                    VStack(alignment: .leading) {
-                        Text("rick")
-                            .bold()
-                        
-                        //  Text("\(product.price)$")
-                        //    .font(.caption)
+                    ZStack(alignment: .topTrailing) {
+                        ZStack(alignment: .bottom) {
+                            Image("maraca")
+                                .resizable()
+                                .cornerRadius(20)
+                                .frame(width: 120, height: 160)
+                                .padding(.bottom, 250) // Ajuste o espaçamento conforme necessário
+                            
+                        }
                     }
-                    .padding()
-                    .frame(width: 180, alignment: .leading)
-                    .background(.ultraThinMaterial)
-                    .cornerRadius(20)
+                    
+                    
                 }
-                .frame(width: 180, height: 250)
-              // .shadow(radius: 3)
-                
-                Button {
-                    // cartManager.addToCart(product: product)
-                } label: {
-                    Image(systemName: "plus")
-                        .padding(10)
-                        .foregroundColor(.black)
-                        .background(.white)
-                        .cornerRadius(50)
-                        .padding()
+            }
+            
+            struct TelaHome_Previews: PreviewProvider {
+                static var previews: some View {
+                    TelaHome()
                 }
             }
         }
     }
-    
-    struct TelaHome_Previews: PreviewProvider {
-        static var previews: some View {
-            TelaHome()
-        }
-    }
-}
