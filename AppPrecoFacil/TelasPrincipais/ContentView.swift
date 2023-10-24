@@ -10,6 +10,7 @@ struct ContentView: View {
     
     @State var email: String = ""
     @State var senha: String = ""
+    @State var isPresent = false
     
     var body: some View {
         
@@ -76,6 +77,9 @@ struct ContentView: View {
                     NavigationLink(destination: TabBar()) {
                         VStack {
                             Text("Entrar")
+                                .onTapGesture {
+                                    isPresent = true
+                                }
                         }
                         .foregroundColor(.white)
                         .frame(width: 200, height: 50) //fundo
@@ -99,6 +103,8 @@ struct ContentView: View {
                         
                         
                     }
+                } .fullScreenCover(isPresented: $isPresent) {
+                    TabBar()
                 }
             }
         }
