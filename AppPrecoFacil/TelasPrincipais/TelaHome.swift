@@ -12,6 +12,8 @@ struct TelaHome: View {
     
     @State var field = ""
     
+    private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    
     var body: some View {
         //barra de pesquisa
         VStack {
@@ -25,27 +27,20 @@ struct TelaHome: View {
             // .padding(.bottom, 10)
             Spacer()
             
-            //cards das PROMOCOES
-            ZStack {
-                RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(.green)
-                    .opacity(0.25)
-                    .frame(width: 170, height: 230)
-                VStack {
-                    Image("omo")
-                        .resizable()
-                        .frame(width: 80, height: 80)
-                    Text("sabão Omo")
-//                    Button() {
-//                        
-//                    } label: {
-//                        Text("$\(String(format: "%.2f", 8.00))")
-//                        foregroundColor(.white)
-//                            .frame(width: 100, height: 40)
-//                            .background(Color.green)
-//                    }
+            ScrollView {
+                LazyVGrid(columns: gridItemLayout) {
+                    ForEach(0..<100) { _ in
+                        VStack {
+                            Image("feijao")
+                                .resizable()
+                                .frame(maxWidth: .infinity, maxHeight: 100)
+                            
+                            Text("Feijão")
+                        }
+                    }
                 }
             }
+            .padding([.horizontal], 24)
         }
     }
 }
