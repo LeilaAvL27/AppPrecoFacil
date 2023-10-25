@@ -14,13 +14,8 @@ struct TelaMercadosParceiros: View {
     
     var body: some View {
         
-        ScrollViewReader { ScrollViewReader in
-      
-        NavigationStack{
-            List (1...30, id: \.self) { item in
-                navigationTitle("Mercados Parceiros")
-                
-                VStack (alignment: .leading) {
+        List (1...30, id: \.self) { item in
+            VStack (alignment: .leading) {
                 Image("fortaleza")
                     .resizable()
                     .clipShape(Circle())
@@ -28,12 +23,12 @@ struct TelaMercadosParceiros: View {
                 Text("Supermercado Fortaleza")
                     .font(.system(size: 16, weight: .medium, design: .default))
                 Text("08:00 às 21:00  - 200m")
-                }
-                .padding([.top, .bottom], 20) //espacamento
-                
-                
-        
-                VStack (alignment: .leading) {
+            }
+            .padding([.top, .bottom], 20) //espacamento
+            
+            
+            
+            VStack (alignment: .leading) {
                 Image("maraca")
                     .resizable()
                     .clipShape(Circle())
@@ -41,12 +36,12 @@ struct TelaMercadosParceiros: View {
                 Text("Supermercado Maracá")
                     .font(.system(size: 16, weight: .medium, design: .default))
                 Text("08:00 às 21:00  - 200m")
-                }
-                .padding([.top, .bottom],20)
-                
-                
-                
-                VStack (alignment: .leading) {
+            }
+            .padding([.top, .bottom],20)
+            
+            
+            
+            VStack (alignment: .leading) {
                 Image("lucia")
                     .resizable()
                     .clipShape(Circle())
@@ -54,12 +49,12 @@ struct TelaMercadosParceiros: View {
                 Text("Supermercado Santa Lúcia")
                     .font(.system(size: 16, weight: .medium, design: .default))
                 Text("08:00 às 21:00  - 200m")
-                }
-                .padding([.top, .bottom],25)
-                
-                
-                
-                VStack (alignment: .leading) {
+            }
+            .padding([.top, .bottom],25)
+            
+            
+            
+            VStack (alignment: .leading) {
                 Image("favorito")
                     .resizable()
                     .clipShape(Circle())
@@ -67,21 +62,19 @@ struct TelaMercadosParceiros: View {
                 Text("Supermercado Favorito")
                     .font(.system(size: 16, weight: .medium, design: .default))
                 Text("08:00 às 21:00  - 200m")
-                }
-                .padding([.top, .bottom],25)
-                
             }
+            .padding([.top, .bottom],25)
             
         }
+        .navigationTitle("Mercados Parceiros")
     }
-}
-// .onReceive(Publisher, perform: { _ in
-//    currentPosition += 1
-//   withAnimation {
-// ScrollViewReader.scrollTo(item, Anchor:
-//  .top)
-///}
-// })
+    // .onReceive(Publisher, perform: { _ in
+    //    currentPosition += 1
+    //   withAnimation {
+    // ScrollViewReader.scrollTo(item, Anchor:
+    //  .top)
+    ///}
+    // })
 }
 
 struct TelaMercadosParceiros_Previews: PreviewProvider {
