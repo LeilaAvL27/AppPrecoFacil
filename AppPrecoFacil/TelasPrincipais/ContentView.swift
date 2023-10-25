@@ -10,12 +10,10 @@ struct ContentView: View {
     
     @State var email: String = ""
     @State var senha: String = ""
-    @State var isPresent = false
     
     var body: some View {
         
-        NavigationStack {
-            
+        NavigationView {
             ZStack {
                 Color.white // cor de fundo da Tela
                 
@@ -75,16 +73,14 @@ struct ContentView: View {
                         .padding(.bottom, 10)
                     
                     NavigationLink(destination: TabBar()) {
-                        VStack {
-                            Text("Entrar")
-                                .onTapGesture {
-                                    isPresent = true
-                                }
-                        }
-                        .foregroundColor(.white)
-                        .frame(width: 200, height: 50) //fundo
-                        .background(.black.opacity(0.85)) //cor fundo
-                        .cornerRadius(10)
+                        Text("Entrar")
+//                        VStack {
+//                            Text("Entrar")
+//                        }
+//                        .foregroundColor(.white)
+//                        .frame(width: 200, height: 50) //fundo
+//                        .background(.black.opacity(0.85)) //cor fundo
+//                        .cornerRadius(10)
                     }
                     
                     
@@ -103,8 +99,6 @@ struct ContentView: View {
                         
                         
                     }
-                } .fullScreenCover(isPresented: $isPresent) {
-                    TabBar()
                 }
             }
         }

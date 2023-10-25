@@ -22,6 +22,7 @@
 		CE9F17312AE4B31300D6894E /* TermosUso.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F17302AE4B31300D6894E /* TermosUso.swift */; };
 		CE9F17332AE4B34100D6894E /* ApagarConta.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F17322AE4B34100D6894E /* ApagarConta.swift */; };
 		CE9F17362AE4C1A600D6894E /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F17352AE4C1A600D6894E /* ProductCard.swift */; };
+		CEE25BB52AE893C000A9E924 /* TesteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE25BB42AE893C000A9E924 /* TesteView.swift */; };
 		CEF510932AD216BC000C6010 /* TelaHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF510922AD216BC000C6010 /* TelaHome.swift */; };
 		CEF510952AD21FE7000C6010 /* TelaPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF510942AD21FE7000C6010 /* TelaPerfil.swift */; };
 		CEF510972AD2238A000C6010 /* TelaPesquisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF510962AD2238A000C6010 /* TelaPesquisa.swift */; };
@@ -45,6 +46,7 @@
 		CE9F17302AE4B31300D6894E /* TermosUso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermosUso.swift; sourceTree = "<group>"; };
 		CE9F17322AE4B34100D6894E /* ApagarConta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApagarConta.swift; sourceTree = "<group>"; };
 		CE9F17352AE4C1A600D6894E /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		CEE25BB42AE893C000A9E924 /* TesteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteView.swift; sourceTree = "<group>"; };
 		CEF510922AD216BC000C6010 /* TelaHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaHome.swift; sourceTree = "<group>"; };
 		CEF510942AD21FE7000C6010 /* TelaPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPerfil.swift; sourceTree = "<group>"; };
 		CEF510962AD2238A000C6010 /* TelaPesquisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPesquisa.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				CE38E3C22AC8B01400CB1C70 /* TelaCadastro.swift */,
 				CEF510922AD216BC000C6010 /* TelaHome.swift */,
 				CE7BB52A2ADF459C00DC9DFF /* TabBar.swift */,
+				CEE25BB42AE893C000A9E924 /* TesteView.swift */,
 				CEF510942AD21FE7000C6010 /* TelaPerfil.swift */,
 				CEF510962AD2238A000C6010 /* TelaPesquisa.swift */,
 				CE350DA42ADF662A00B8630D /* SearchBar.swift */,
@@ -214,6 +217,7 @@
 				CE36ECB62ABA6C2C00160C98 /* AppPrecoFacilApp.swift in Sources */,
 				CE350DA52ADF662A00B8630D /* SearchBar.swift in Sources */,
 				CE9F17312AE4B31300D6894E /* TermosUso.swift in Sources */,
+				CEE25BB52AE893C000A9E924 /* TesteView.swift in Sources */,
 				CE582FC82AD239A1007D4485 /* TelaConfiguracoes.swift in Sources */,
 				CE582FC62AD23982007D4485 /* TelaMercadosParceiros.swift in Sources */,
 				CE38E3C32AC8B01400CB1C70 /* TelaCadastro.swift in Sources */,
