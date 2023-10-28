@@ -9,18 +9,16 @@ import SwiftUI
 
 struct TelaConfiguracoes: View {
     var body: some View {
-        
-            List {
-                navigationTitle("Configurações")
-                
-                NavigationLink("Sobre Nós", destination: SobreNos())
-                NavigationLink("Termos de Uso", destination: TermosUso())
-                NavigationLink("Apagar Conta", destination: ApagarConta())
-             
-                
-               }
-            }
+        List {
+            
+            NavigationLink("Sobre Nós", destination: SobreNos())
+            NavigationLink("Termos de Uso", destination: TermosUso())
+            NavigationLink("Apagar Conta", destination: ApagarConta())
         }
+        
+        .navigationTitle("Configurações")
+    }
+}
 
 
 struct TelaConfiguracoes_Previews: PreviewProvider {

@@ -11,50 +11,55 @@ import SwiftUI
 struct TelaHome: View {
     
     @State var field = ""
-    
+    private var gridItemLayout = [GridItem(.flexible()),
+                                  GridItem(.flexible()),
+                                  GridItem(.flexible())]
     
     var body: some View {
         
-        //barra de pesquisa
+        // DEFINICOES BARRA DE PESQUISA
         VStack {
-            //Image(systemName: "")
-            TextField("Pesquise seu produto aqui",
-                      text:$field)
-            .padding()
-            .frame(width: 350, height: 50) //largura , altura
-            .background(Color.gray.opacity(0.3))
-            .cornerRadius(30)
-            .border(.gray.opacity(0.05))
-            // .padding(.bottom, 10)
+            // Image(systemName: "")
+            TextField("Pesquise seu produto aqui",text:$field)
+                .padding()
+                .frame(width: 350, height: 50) //largura , altura
+                .background(Color.gray.opacity(0.3))
+                .cornerRadius(30)
+                .border(.gray.opacity(0.05))
             Spacer()
             
-            //cards das PROMOCOES
-            ZStack {
-                RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(.green)
-                    .opacity(0.25)
-                    .frame(width: 170, height: 230)
-                VStack {
-                    Image("omo")
-                        .resizable()
-                        .frame(width: 80, height: 80)
-                    Text("sabão Omo")
-                    Button() {
-                        
-                    } label: {
-                        Text("$\(String(format: "%.2f", 8.00))")
-                        foregroundColor(.white)
-                            .frame(width: 100, height: 40)
-                            .background(Color.green)
+            
+            // DEFINICOES CAIXAS DE IMAGENS
+            ScrollView {
+                Text("PROMOÇÕES")
+                    .font(.title3)
+                    .foregroundColor(.red)
+                
+                LazyVGrid(columns: gridItemLayout) {
+                    ForEach(0..<21) { _ in
+                        VStack {
+                            Image("cafe")
+                                .resizable()
+                                .frame(maxWidth: .infinity, maxHeight: 100)
+                            //  .frame(width: 118, height: 117) // Define as dimensões da imagem
+                                .cornerRadius(22) // Define as bordas da imagem
+                            
+                            Text("Café 3 Corações Extraforte - 250g")
+                                .font(.system(size: 12, weight: .light, design: .serif))
+                            
+                        }
                     }
                 }
             }
+            .padding([.horizontal], 24)
         }
     }
-            
-            struct TelaHome_Previews: PreviewProvider {
-                static var previews: some View {
-                    TelaHome()
-                }
-            }
-        }
+}
+
+
+
+struct TelaHome_Previews: PreviewProvider {
+    static var previews: some View {
+        TelaHome()
+    }
+}
