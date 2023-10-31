@@ -38,24 +38,10 @@ struct TelaPerfil: View {
                         .padding(.bottom, 100)
                 }
                 
-                VStack (alignment: .leading) {
-                    List {
-                        //Alinhar Lista a esquerda da Tela
-                        
-                        //image profile
-                        Image("profile")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 80, height: 80, alignment: .leading)
-                            .mask {
-                                Circle()
-                                    .frame(width: 80, height: 80, alignment: .leading)
-                            }
+               
             
-                        Text("Rick Morty")
-                            .foregroundColor(.black)
-                            .padding(.bottom, 100)
-                    }
+                        
+                    
                     
                     VStack (alignment: .leading) {
                         List {
@@ -74,7 +60,7 @@ struct TelaPerfil: View {
             }
         }
     }
-}
+
 
 struct TelaPerfil_Previews: PreviewProvider {
     static var previews: some View {
