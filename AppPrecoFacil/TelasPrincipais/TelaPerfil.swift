@@ -41,8 +41,8 @@ struct TelaPerfil: View {
                 List {
                     //Alinhar Lista a esquerda da Tela
                     
-                    NavigationLink("Principal", destination: TelaHome())
-                    NavigationLink("Minha Lista de Compras", destination: MyList())
+                    NavigationLink("Principal", destination: TabBar())
+                    NavigationLink("Minha Lista de Compras", destination: MinhaLista())
                     NavigationLink("Mercados Parceiros", destination: TelaMercadosParceiros())
                     NavigationLink("Configurações", destination: TelaConfiguracoes())
                     NavigationLink("Sair", destination: ContentView())

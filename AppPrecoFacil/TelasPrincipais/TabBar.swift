@@ -17,7 +17,7 @@ struct TabBar: View {
                     Text("Home")
                 }
             
-            MyList()
+            MinhaLista()
                 .tabItem{
                     Image(systemName: "list.bullet.clipboard")
                     Text("Minha Lista")

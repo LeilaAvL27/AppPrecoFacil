@@ -11,9 +11,7 @@ import SwiftUI
 struct TelaHome: View {
     
     @State var field = ""
-    private var gridItemLayout = [GridItem(.flexible()),
-                                  GridItem(.flexible()),
-                                  GridItem(.flexible())]
+    private var gridItemLayout = [GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
         
