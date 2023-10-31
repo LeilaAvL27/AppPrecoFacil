@@ -21,12 +21,14 @@
 		CE9F172F2AE4B28400D6894E /* SobreNos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F172E2AE4B28400D6894E /* SobreNos.swift */; };
 		CE9F17312AE4B31300D6894E /* TermosUso.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F17302AE4B31300D6894E /* TermosUso.swift */; };
 		CE9F17332AE4B34100D6894E /* ApagarConta.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F17322AE4B34100D6894E /* ApagarConta.swift */; };
-		CE9F17362AE4C1A600D6894E /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F17352AE4C1A600D6894E /* ProductCard.swift */; };
-		CEE25BB52AE893C000A9E924 /* TesteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE25BB42AE893C000A9E924 /* TesteView.swift */; };
+		CEAD40B42AEDBD980088E26E /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD40B32AEDBD980088E26E /* ShopItem.swift */; };
+		CEAD40B62AEDC3F70088E26E /* MinhaLista.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD40B52AEDC3F70088E26E /* MinhaLista.swift */; };
+		CEAD40B82AEDC51F0088E26E /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD40B72AEDC51F0088E26E /* Shop.swift */; };
+		CEAD40BA2AEDC53C0088E26E /* Dados.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD40B92AEDC53C0088E26E /* Dados.swift */; };
+		CEAD40BC2AEDDC300088E26E /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD40BB2AEDDC300088E26E /* Cart.swift */; };
 		CEF510932AD216BC000C6010 /* TelaHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF510922AD216BC000C6010 /* TelaHome.swift */; };
 		CEF510952AD21FE7000C6010 /* TelaPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF510942AD21FE7000C6010 /* TelaPerfil.swift */; };
 		CEF510972AD2238A000C6010 /* TelaPesquisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF510962AD2238A000C6010 /* TelaPesquisa.swift */; };
-		CEF510992AD2244A000C6010 /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF510982AD2244A000C6010 /* MyList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,12 +47,14 @@
 		CE9F172E2AE4B28400D6894E /* SobreNos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreNos.swift; sourceTree = "<group>"; };
 		CE9F17302AE4B31300D6894E /* TermosUso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermosUso.swift; sourceTree = "<group>"; };
 		CE9F17322AE4B34100D6894E /* ApagarConta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApagarConta.swift; sourceTree = "<group>"; };
-		CE9F17352AE4C1A600D6894E /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
-		CEE25BB42AE893C000A9E924 /* TesteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteView.swift; sourceTree = "<group>"; };
+		CEAD40B32AEDBD980088E26E /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
+		CEAD40B52AEDC3F70088E26E /* MinhaLista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhaLista.swift; sourceTree = "<group>"; };
+		CEAD40B72AEDC51F0088E26E /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		CEAD40B92AEDC53C0088E26E /* Dados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dados.swift; sourceTree = "<group>"; };
+		CEAD40BB2AEDDC300088E26E /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		CEF510922AD216BC000C6010 /* TelaHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaHome.swift; sourceTree = "<group>"; };
 		CEF510942AD21FE7000C6010 /* TelaPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPerfil.swift; sourceTree = "<group>"; };
 		CEF510962AD2238A000C6010 /* TelaPesquisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPesquisa.swift; sourceTree = "<group>"; };
-		CEF510982AD2244A000C6010 /* MyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,12 +112,15 @@
 			path = OutrasTelas;
 			sourceTree = "<group>";
 		};
-		CE9F17342AE4C17900D6894E /* Lista */ = {
+		CEAD40B22AEDBB5A0088E26E /* ListaDeCompras */ = {
 			isa = PBXGroup;
 			children = (
-				CE9F17352AE4C1A600D6894E /* ProductCard.swift */,
+				CEAD40B32AEDBD980088E26E /* ShopItem.swift */,
+				CEAD40B72AEDC51F0088E26E /* Shop.swift */,
+				CEAD40BB2AEDDC300088E26E /* Cart.swift */,
+				CEAD40B92AEDC53C0088E26E /* Dados.swift */,
 			);
-			path = Lista;
+			path = ListaDeCompras;
 			sourceTree = "<group>";
 		};
 		CEF5108A2AD2102B000C6010 /* TelasPrincipais */ = {
@@ -128,8 +135,8 @@
 				CEF510942AD21FE7000C6010 /* TelaPerfil.swift */,
 				CEF510962AD2238A000C6010 /* TelaPesquisa.swift */,
 				CE350DA42ADF662A00B8630D /* SearchBar.swift */,
-				CEF510982AD2244A000C6010 /* MyList.swift */,
-				CE9F17342AE4C17900D6894E /* Lista */,
+				CEAD40B52AEDC3F70088E26E /* MinhaLista.swift */,
+				CEAD40B22AEDBB5A0088E26E /* ListaDeCompras */,
 				CE582FC52AD23982007D4485 /* TelaMercadosParceiros.swift */,
 				CE582FC72AD239A1007D4485 /* TelaConfiguracoes.swift */,
 				CE9F172D2AE4B23000D6894E /* OutrasTelas */,
@@ -210,8 +217,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE36ECB82ABA6C2C00160C98 /* ContentView.swift in Sources */,
-				CEF510992AD2244A000C6010 /* MyList.swift in Sources */,
-				CE9F17362AE4C1A600D6894E /* ProductCard.swift in Sources */,
 				CE9F172F2AE4B28400D6894E /* SobreNos.swift in Sources */,
 				CEF510972AD2238A000C6010 /* TelaPesquisa.swift in Sources */,
 				CE36ECB62ABA6C2C00160C98 /* AppPrecoFacilApp.swift in Sources */,
@@ -219,14 +224,19 @@
 				CE9F17312AE4B31300D6894E /* TermosUso.swift in Sources */,
 				CEE25BB52AE893C000A9E924 /* TesteView.swift in Sources */,
 				CE582FC82AD239A1007D4485 /* TelaConfiguracoes.swift in Sources */,
+				CEAD40BC2AEDDC300088E26E /* Cart.swift in Sources */,
 				CE582FC62AD23982007D4485 /* TelaMercadosParceiros.swift in Sources */,
 				CE38E3C32AC8B01400CB1C70 /* TelaCadastro.swift in Sources */,
 				CE7BB52B2ADF459C00DC9DFF /* TabBar.swift in Sources */,
+				CEAD40B62AEDC3F70088E26E /* MinhaLista.swift in Sources */,
 				CE582FCA2AD239B2007D4485 /* TelaSair.swift in Sources */,
 				CEF510952AD21FE7000C6010 /* TelaPerfil.swift in Sources */,
 				CE9F17332AE4B34100D6894E /* ApagarConta.swift in Sources */,
 				CEF510932AD216BC000C6010 /* TelaHome.swift in Sources */,
+				CEAD40B82AEDC51F0088E26E /* Shop.swift in Sources */,
+				CEAD40BA2AEDC53C0088E26E /* Dados.swift in Sources */,
 				CE38E3C52AC8B0E700CB1C70 /* InteracaoEntreTelas.swift in Sources */,
+				CEAD40B42AEDBD980088E26E /* ShopItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

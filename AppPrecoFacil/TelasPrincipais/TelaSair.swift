@@ -12,14 +12,13 @@ struct TelaSair: View {
         
         NavigationStack{
             List{
-           
-                Text("SAIR")
-                  
                 
-            }
+                Text("SAIR")
+                
             }
         }
     }
+}
 
 struct TelaSair_Previews: PreviewProvider {
     static var previews: some View {

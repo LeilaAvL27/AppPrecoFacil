@@ -12,11 +12,11 @@ struct ContentView: View {
     @State var senha: String = ""
     
     var body: some View {
-        
-        NavigationView {
+        NavigationStack {
+            
             ZStack {
-                Color.white // cor de fundo da Tela
-                
+                Color.white
+                // DEFINICOES PARTE SUPERIOR
                 Rectangle()
                     .scale(1.7)
                     .foregroundColor(.orange)
@@ -26,7 +26,7 @@ struct ContentView: View {
                 Circle()
                     .scale(1.7)
                     .foregroundColor(.white)
-                    .frame(width: 70, height: 70) //largura, altura
+                    .frame(width: 70, height: 70)
                     .padding(.bottom, 500)
                 
                 VStack {
@@ -46,8 +46,9 @@ struct ContentView: View {
                         .clipShape(Circle())
                         .padding(.bottom, 500) // Ajuste o espaçamento conforme necessário
                 }
-              //  .padding()
-
+                
+                
+                // DEFINICOES PARTE INFERIOR
                 Text ("FAÇA SEU LOGIN")
                     .font(.body)
                     .bold()
@@ -57,7 +58,7 @@ struct ContentView: View {
                 VStack {
                     TextField("Insira seu email", text: $email)
                         .padding()
-                        .frame(width: 300, height: 50) //Largura, altura
+                        .frame(width: 300, height: 50) // largura, altura
                         .background(Color.gray.opacity(0.3))
                         .cornerRadius(30)
                         .border(.gray.opacity(0.05))
@@ -74,39 +75,35 @@ struct ContentView: View {
                     
                     NavigationLink(destination: TabBar()) {
                         Text("Entrar")
-//                        VStack {
-//                            Text("Entrar")
-//                        }
-//                        .foregroundColor(.white)
-//                        .frame(width: 200, height: 50) //fundo
-//                        .background(.black.opacity(0.85)) //cor fundo
-//                        .cornerRadius(10)
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 50)
+                            .background(.black.opacity(0.85))
+                            .cornerRadius(10)
                     }
+                    
+                    //BOTAO ESQUECEU A SENHA
+                    .padding()
+                    Text("Esqueceu a senha?")
+                        .font(.callout)
+                        .foregroundColor(.blue)
+                
+                    //BOTAO CADASTRE-SE
+                    NavigationLink("Cadastre-se", destination: Tela_Cadastro())
                     
                     
                     .padding()
-                    //     NavigationLink(destination: ???()) {
-                    Text ("Esqueceu a senha?") //Deixar mais próximo do botão de ENTRAR
+                    Text("OU")
                         .font(.callout)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.black)
                     
-                    
-                        .padding()
-                    NavigationLink(destination: Tela_Cadastro()) {
-                        Text ("Não tem conta? Cadastre-se") // Deixar do lado de ESQUECEU SENHA
-                            .font(.callout)
-                            .foregroundColor(.black)
-                        
-                        
-                    }
                 }
             }
         }
     }
+}
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
         }
     }
-}
