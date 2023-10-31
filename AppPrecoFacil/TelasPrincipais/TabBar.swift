@@ -10,9 +10,9 @@ import SwiftUI
 struct TabBar: View {
     var body: some View {
         
-        TabView{
+        TabView {
             TelaHome()
-                .tabItem{
+                .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
@@ -23,8 +23,8 @@ struct TabBar: View {
                     Text("Minha Lista")
                 }
             
-          TelaPesquisa(text: .constant(""))
-                .tabItem{
+            TelaPesquisa(text: .constant(""))
+                .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Pesquisar")
                 }
