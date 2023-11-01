@@ -26,7 +26,9 @@ struct Shop: View {
                 Spacer().frame(height: 75)
                 Text("Itens")
                     .frame(width: 320, alignment: .leading)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.black)
+                    .bold()
+                
             } .padding(20)
             ScrollView() {
                 LazyVGrid(columns: colums, spacing: 30) {
