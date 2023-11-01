@@ -28,7 +28,7 @@ struct MinhaLista: View {
                             .frame(width: 40, height: 40)
                         VStack(spacing: 5){
                             Text(cartItems[item][1] as! String)
-                            Text("$\(String(format: "%.2f", cartItems[item][2] as! Double))")
+                            Text("R$\(String(format: "%.2f", cartItems[item][2] as! Double))")
                                 .foregroundColor(.gray)
                         }
                     }
@@ -52,7 +52,7 @@ struct MinhaLista: View {
                         .font(.system(size: 25))
                         .frame(width: 320, alignment: .leading)
                         .padding(.leading, 60)
-                    Text("$\(String(format: "%.2f", totalPrice))")
+                    Text("R$\(String(format: "%.2f", totalPrice))")
                         .foregroundColor(.white)
                         .font(.system(size: 26, weight: .bold))
                         .frame(width: 320, alignment: .leading)

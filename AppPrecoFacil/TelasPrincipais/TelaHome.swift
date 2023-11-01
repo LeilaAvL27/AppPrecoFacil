@@ -39,10 +39,10 @@ struct TelaHome: View {
             // DEFINICOES CAIXAS DE IMAGENS
                 .padding(.bottom, 250)
             ScrollView {
-                Text("PROMOÇÕES")
-                    .font(.title3)
+                Text("PROMOÇÕES DA SEMANA")
+                    .font(.title2)
                     .bold()
-                    .foregroundColor(.black)
+                    .foregroundColor(.orange)
                     .frame(width: 400, alignment: .leading)
                 
                 
@@ -72,7 +72,6 @@ struct TelaHome: View {
                     ForEach(0..<items.count, id:\.self) {
                         item in
                         ShopItem(imageName: items[item][0] as! String, title: items[item][1] as! String, price: items[item][2] as! Double, color: items[item][3] as! Color, selfIndex: item)
-                        
                     }
                 }
             } .padding(15)

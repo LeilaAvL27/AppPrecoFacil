@@ -27,22 +27,25 @@ struct ShopItem: View {
                     .frame(width: 120, height: 120)
                     .cornerRadius(10)
                 Text(title)
+                    .bold()
+                 
                 Button() {
                     cartItems.append(shopItem[selfIndex])
                 } label: {
-                    Text("$\(String(format: "%.2f", 8.00))")
-                        .foregroundColor(.red)
+                    Text("R$\(String(format: "%.2f", 8.00))")
+                        .foregroundColor(.black)
                         .bold()
                         .frame(width: 100, height: 40)
                         .background(color)
                 }
             }
+            
         }
     }
 }
 
 struct ShopItem_Previews: PreviewProvider {
     static var previews: some View {
-        ShopItem(imageName: "omo", title: "Sabão em Pó", price: 8.00, color: Color.black, selfIndex: 0)
+        ShopItem(imageName: "omo", title: "Sabão em Pó", price: 8.00, color: Color.red, selfIndex: 0)
     }
 }

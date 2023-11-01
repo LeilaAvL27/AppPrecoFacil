@@ -25,7 +25,7 @@ struct Cart: View {
                             .frame(width: 40, height: 40)
                         VStack(spacing: 5){
                             Text(cartItems[item][1] as! String)
-                            Text("$\(String(format: "%.2f", cartItems[item][2] as! Double))")
+                            Text("R$\(String(format: "%.2f", cartItems[item][2] as! Double))")
                                 .foregroundColor(.gray)
                         }
                     }
