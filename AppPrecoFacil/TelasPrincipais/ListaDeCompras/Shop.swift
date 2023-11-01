@@ -13,7 +13,8 @@ struct Shop: View {
     
     var colums = [
         GridItem(.flexible()),
-        GridItem(.flexible())
+        GridItem(.flexible()),
+        GridItem(.flexible()),
     ]
     
     var items: [[Any]] = shopItem
