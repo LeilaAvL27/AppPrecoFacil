@@ -17,20 +17,22 @@ struct ShopItem: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(Color.green)
-                .opacity(0.25)
-                .frame(width: 170, height: 230)
+            //RoundedRectangle(cornerRadius: 22)
+           //     .foregroundColor(Color.gray)
+            //    .opacity(0.25)
+            //    .frame(width: 150, height: 200)
             VStack{
                 Image(imageName)
                     .resizable()
-                    .frame(width: 80, height: 80)
+                    .frame(width: 120, height: 120)
+                    .cornerRadius(10)
                 Text(title)
                 Button() {
                     cartItems.append(shopItem[selfIndex])
                 } label: {
                     Text("$\(String(format: "%.2f", 8.00))")
-                        .foregroundColor(.black)
+                        .foregroundColor(.red)
+                        .bold()
                         .frame(width: 100, height: 40)
                         .background(color)
                 }
@@ -41,6 +43,6 @@ struct ShopItem: View {
 
 struct ShopItem_Previews: PreviewProvider {
     static var previews: some View {
-        ShopItem(imageName: "omo", title: "omo sabão", price: 8.00, color: Color.green, selfIndex: 0)
+        ShopItem(imageName: "omo", title: "Sabão em Pó", price: 8.00, color: Color.black, selfIndex: 0)
     }
 }

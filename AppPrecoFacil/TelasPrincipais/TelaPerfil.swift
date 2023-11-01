@@ -10,6 +10,7 @@ import SwiftUI
 struct TelaPerfil: View {
     var body: some View {
         NavigationStack {
+            
             VStack {
                 ZStack{
                     // BACKGROUND PROFILE
@@ -34,7 +35,7 @@ struct TelaPerfil: View {
                         .padding(.bottom, 100)
                 }
                     
-                    VStack (alignment: .leading) {
+                //  VStack (alignment: .leading) {
                         List {
                             
                             NavigationLink("Principal", destination: TabBar())
@@ -49,7 +50,7 @@ struct TelaPerfil: View {
                 }
             }
         }
-    }
+  
 struct TelaPerfil_Previews: PreviewProvider {
     static var previews: some View {
         TelaPerfil()

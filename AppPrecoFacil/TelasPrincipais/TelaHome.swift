@@ -20,7 +20,7 @@ struct TelaHome: View {
             // Image(systemName: "")
             TextField("Pesquise seu produto aqui",text:$field)
                 .padding()
-                .frame(width: 350, height: 50) //largura , altura
+                .frame(width: 370, height: 50) //largura , altura
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(30)
                 .border(.gray.opacity(0.05))
@@ -48,6 +48,7 @@ struct TelaHome: View {
                             
                             Text("Café 3 Corações Extraforte - 250g")
                                 .font(.system(size: 12, weight: .light, design: .serif))
+                            
                             
                         }
                     }
