@@ -88,6 +88,7 @@ struct TelaHome: View {
                             Image(systemName: "cart")
                         }
                     }
+            
         }
     }
 }
