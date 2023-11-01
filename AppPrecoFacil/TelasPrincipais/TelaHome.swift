@@ -10,8 +10,17 @@ import SwiftUI
 
 struct TelaHome: View {
     
+    @State var goToCart = false
     @State var field = ""
-    private var gridItemLayout = [GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
+    
+    var colums = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+    ]
+  //  private var gridItemLayout = [GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
+    
+    var items: [[Any]] = shopItem
     
     var body: some View {
         
@@ -35,32 +44,54 @@ struct TelaHome: View {
                     .bold()
                     .foregroundColor(.black)
                     .frame(width: 400, alignment: .leading)
-                    
                 
-                LazyVGrid(columns: gridItemLayout) {
-                    ForEach(0..<21) { _ in
-                        VStack {
-                            Image("cafe")
-                                .resizable()
-                                .frame(maxWidth: .infinity, maxHeight: 100)
-                            //  .frame(width: 118, height: 117) // Define as dimensões da imagem
-                                .cornerRadius(22)
-                            
-                            Text("Café 3 Corações Extraforte - 250g")
-                                .font(.system(size: 12, weight: .light, design: .serif))
-                            
-                            
-                        }
+                
+                // LazyVGrid(columns: gridItemLayout) {
+                //     ForEach(0..<21) { _ in
+                //      VStack {
+                //           Image("cafe")
+                //              .resizable()
+                //              .frame(maxWidth: .infinity, maxHeight: 100)
+                //  .frame(width: 118, height: 117) // Define as dimensões da imagem
+                //           .cornerRadius(22)
+                
+                //       Text("Café 3 Corações Extraforte - 250g")
+                //         .font(.system(size: 12, weight: .light, design: .serif))
+                
+                
+                //       }
+                //     }
+                //   }
+                // }
+                //   .padding([.horizontal], 24)
+                // }
+                //}
+                //}
+                
+                LazyVGrid(columns: colums, spacing: 30) {
+                    ForEach(0..<items.count, id:\.self) {
+                        item in
+                        ShopItem(imageName: items[item][0] as! String, title: items[item][1] as! String, price: items[item][2] as! Double, color: items[item][3] as! Color, selfIndex: item)
+                        
                     }
                 }
-            }
-            .padding([.horizontal], 24)
+            } .padding(15)
+        }
+        .navigationDestination(isPresented: $goToCart) {
+            Cart()
+        }
+        .toolbar{
+            ToolbarItem(placement:
+                    .navigationBarTrailing)  {
+                        Button() {
+                            goToCart = true
+                        } label: {
+                            Image(systemName: "cart")
+                        }
+                    }
         }
     }
 }
-
-
-
 struct TelaHome_Previews: PreviewProvider {
     static var previews: some View {
         TelaHome()
