@@ -12,10 +12,13 @@ struct MinhaLista: View {
     @State var totalPrice = 0.00
     
     var body: some View {
+        //DEFINICOES DA MINHA LISTA DE COMPRAS
         VStack {
             Text("Minha Lista")
-                .font(.system(size:44, weight: .semibold,design: .rounded))
-                .frame(width: 230, alignment: .leading)
+                .font(.system(size:40, weight: .semibold,design: .rounded))
+                .frame(width: 350, alignment: .leading)
+            
+            //DEFINICOES ITENS DA LISTA
             List {
                 ForEach(0..<cartItems.endIndex,
                         id:\.self) {item in
@@ -35,38 +38,43 @@ struct MinhaLista: View {
                 }
             }
             Spacer()
+            
+            //DEFINICOES CALCULADORA DE PREÇO
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(.green)
+                    .foregroundColor(.orange)
                     .opacity(0.8)
-                    .frame(width: 350, height: 120)
+                    .frame(width: 350, height: 100)
+                
                 VStack{
                     Text("Preço Total")
                         .foregroundColor(.white)
-                        .font(.system(size: 20))
-                        .frame(width: 350, alignment: .leading)
+                        .font(.system(size: 25))
+                        .frame(width: 320, alignment: .leading)
                         .padding(.leading, 60)
                     Text("$\(String(format: "%.2f", totalPrice))")
                         .foregroundColor(.white)
                         .font(.system(size: 26, weight: .bold))
-                        .frame(width: 350, alignment: .leading)
+                        .frame(width: 320, alignment: .leading)
                         .padding(.leading, 60)
                 }
-                Button(){
+              Button(){
                 
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10)
-                            .strokeBorder()
-                            .frame(width: 120, height: 50)
-                            .foregroundColor(.white)
-                        Text("Pay Now>")
-                            .foregroundColor(.white)
-                            .bold()
+            } label: {
+                   ZStack{
+                 //       RoundedRectangle(cornerRadius: 10)
+                   //         .strokeBorder()
+                     //       .frame(width: 120, height: 50)
+                       //     .foregroundColor(.white)
+                       // Text("Pay Now>")
+                         //   .foregroundColor(.white)
+                           // .bold()
                     }
                 }.offset(x: 80)
                 
             }
+            .padding(.bottom, 30) // ALTURA DA CAIXA DE CALCULO
+            
         }.onAppear(perform: self.calculateTotalPrice)
     }
     func calculateTotalPrice() {

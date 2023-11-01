@@ -24,7 +24,7 @@ struct TelaHome: View {
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(30)
                 .border(.gray.opacity(0.05))
-            //Spacer()
+            
             
             
             // DEFINICOES CAIXAS DE IMAGENS
