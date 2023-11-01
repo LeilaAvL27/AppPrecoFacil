@@ -32,7 +32,7 @@ struct ShopItem: View {
                 Button() {
                     cartItems.append(shopItem[selfIndex])
                 } label: {
-                    Text("R$\(String(format: "%.2f", 8.00))")
+                    Text("R$\(String(format: "%.2f", price))")
                         .foregroundColor(.black)
                         .bold()
                         .frame(width: 100, height: 40)
