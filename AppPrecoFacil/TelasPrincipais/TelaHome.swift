@@ -24,14 +24,18 @@ struct TelaHome: View {
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(30)
                 .border(.gray.opacity(0.05))
-            Spacer()
+            //Spacer()
             
             
             // DEFINICOES CAIXAS DE IMAGENS
+                .padding(.bottom, 250)
             ScrollView {
                 Text("PROMOÇÕES")
                     .font(.title3)
-                    .foregroundColor(.red)
+                    .bold()
+                    .foregroundColor(.black)
+                    .frame(width: 400, alignment: .leading)
+                    
                 
                 LazyVGrid(columns: gridItemLayout) {
                     ForEach(0..<21) { _ in
@@ -40,7 +44,7 @@ struct TelaHome: View {
                                 .resizable()
                                 .frame(maxWidth: .infinity, maxHeight: 100)
                             //  .frame(width: 118, height: 117) // Define as dimensões da imagem
-                                .cornerRadius(22) // Define as bordas da imagem
+                                .cornerRadius(22)
                             
                             Text("Café 3 Corações Extraforte - 250g")
                                 .font(.system(size: 12, weight: .light, design: .serif))
