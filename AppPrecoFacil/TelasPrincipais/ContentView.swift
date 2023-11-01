@@ -90,7 +90,6 @@ struct ContentView: View {
                     //BOTAO CADASTRE-SE
                     NavigationLink("Cadastre-se", destination: Tela_Cadastro())
                     
-                    
                     .padding()
                     Text("OU")
                         .font(.callout)

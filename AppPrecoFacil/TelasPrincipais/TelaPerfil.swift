@@ -12,18 +12,14 @@ struct TelaPerfil: View {
         NavigationStack {
             VStack {
                 ZStack{
-                    // Background Profile
+                    // BACKGROUND PROFILE
                     Rectangle()
                         .ignoresSafeArea()
                         .foregroundColor(.orange)
-                        .frame( height: 160) //altura
-                    
-                    // Circle()
-                    // .foregroundColor(.white)
-                    // .frame(width: 81, height: 81, alignment: .leading)
+                        .frame( height: 160)
+                
                         .overlay (
                             
-                            //image profile
                             Image("profile")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
@@ -37,15 +33,9 @@ struct TelaPerfil: View {
                         .foregroundColor(.black)
                         .padding(.bottom, 100)
                 }
-                
-               
-            
-                        
-                    
                     
                     VStack (alignment: .leading) {
                         List {
-                            //Alinhar Lista a esquerda da Tela
                             
                             NavigationLink("Principal", destination: TabBar())
                             NavigationLink("Minha Lista de Compras", destination: MinhaLista())
@@ -60,8 +50,6 @@ struct TelaPerfil: View {
             }
         }
     }
-
-
 struct TelaPerfil_Previews: PreviewProvider {
     static var previews: some View {
         TelaPerfil()

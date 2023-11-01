@@ -30,7 +30,7 @@ struct Tela_Cadastro: View {
                 Circle()
                     .scale(1.7)
                     .foregroundColor(.white)
-                    .frame(width: 70, height: 70) //largura, altura
+                    .frame(width: 70, height: 70)
                     .padding(.bottom, 570)
                 
                 // DEFINICOES IMAGENS
@@ -96,8 +96,8 @@ struct Tela_Cadastro: View {
                     NavigationLink(destination: TabBar()) {
                         Text("Entrar")
                             .foregroundColor(.white)
-                            .frame(width: 200, height: 50) //fundo
-                            .background(.black.opacity(0.85)) //cor fundo
+                            .frame(width: 200, height: 50)
+                            .background(.black.opacity(0.85))
                             .cornerRadius(10)
                     }
                     
