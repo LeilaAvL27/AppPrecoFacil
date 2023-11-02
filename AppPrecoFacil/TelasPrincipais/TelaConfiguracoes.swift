@@ -14,6 +14,7 @@ struct TelaConfiguracoes: View {
             NavigationLink("Sobre Nós", destination: SobreNos())
             NavigationLink("Termos de Uso", destination: TermosUso())
             NavigationLink("Apagar Conta", destination: ApagarConta())
+          
         }
         
         .navigationTitle("Configurações")

@@ -18,32 +18,34 @@ struct TelaPerfil: View {
                         .ignoresSafeArea()
                         .foregroundColor(.orange)
                         .frame( height: 160)
-                
-                        .overlay (
-                            
-                            Image("profile")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 80, height: 80, alignment: .leading)
-                                .mask {
-                                    Circle()
-                                        .frame(width: 80, height: 80, alignment: .leading)
-                                }
-                        )
-                    Text("Rick Morty")
-                        .foregroundColor(.black)
-                        .padding(.bottom, 100)
-                }
                     
-                //  VStack (alignment: .leading) {
+                    VStack (alignment: .leading) {
+                        Image("profile")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 80, height: 80)
+                            .clipShape(Circle())
+                            .padding(.bottom, 5) // Ajuste o espaçamento conforme necessário
+                        
+                        Text("Rick Morty")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                    }
+                }
+                            
                         List {
                             
                             NavigationLink("Principal", destination: TabBar())
                             NavigationLink("Minha Lista de Compras", destination: MinhaLista())
                             NavigationLink("Mercados Parceiros", destination: TelaMercadosParceiros())
                             NavigationLink("Configurações", destination: TelaConfiguracoes())
-                            NavigationLink("Sair", destination: ContentView())
-                                .foregroundColor(.red)
+                            Button(action: {
+                                // Fecha o aplicativo
+                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                            }) {
+                                Text("Sair")
+                                    .foregroundColor(.red)
+                            }
                             
                         }
                     }
