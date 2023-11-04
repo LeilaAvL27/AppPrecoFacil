@@ -11,25 +11,11 @@ struct SobreNos: View {
     var body: some View {
         
         NavigationStack{
-          
-            // List {
-
-            
-                  Image("Logo")
+                  Image("sobreNos")
                       .resizable()
                       .aspectRatio(contentMode: .fill)
-                      .frame(width: 100, height: 100, alignment: .leading)
+                      .frame(width: 400, height: 400, alignment: .center)
                      // .padding(.bottom,300)
-                  Text("Preço Fácil")
-                      .font(.largeTitle)
-                      .bold()
-                      .foregroundColor(.yellow)
-                  //    .padding(.bottom, 300)
-                  
-                  Text("Inserir texto Sobre Nós aqui")
-                  .padding(.bottom, 400)
-            
-             // }
             
            }
         }

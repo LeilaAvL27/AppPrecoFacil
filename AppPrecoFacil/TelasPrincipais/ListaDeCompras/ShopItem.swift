@@ -22,10 +22,17 @@ struct ShopItem: View {
             //    .opacity(0.25)
             //    .frame(width: 150, height: 200)
             VStack{
+                // Text(mercado)
+                //     .bold()
+                 //   .foregroundColor(.orange)
+                  //   .frame(height: 30)
+                  //   .background(Color.black.opacity(0.2))
+                
                 Image(imageName)
                     .resizable()
                     .frame(width: 120, height: 120)
                     .cornerRadius(10)
+                
                 Text(title)
                     .bold()
                  

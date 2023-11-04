@@ -29,6 +29,7 @@
 		CEF510932AD216BC000C6010 /* TelaHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF510922AD216BC000C6010 /* TelaHome.swift */; };
 		CEF510952AD21FE7000C6010 /* TelaPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF510942AD21FE7000C6010 /* TelaPerfil.swift */; };
 		CEF510972AD2238A000C6010 /* TelaPesquisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF510962AD2238A000C6010 /* TelaPesquisa.swift */; };
+		CEF61E4D2AF6BE1B003EA513 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF61E4C2AF6BE1B003EA513 /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		CEF510922AD216BC000C6010 /* TelaHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaHome.swift; sourceTree = "<group>"; };
 		CEF510942AD21FE7000C6010 /* TelaPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPerfil.swift; sourceTree = "<group>"; };
 		CEF510962AD2238A000C6010 /* TelaPesquisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPesquisa.swift; sourceTree = "<group>"; };
+		CEF61E4C2AF6BE1B003EA513 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,12 +128,12 @@
 		CEF5108A2AD2102B000C6010 /* TelasPrincipais */ = {
 			isa = PBXGroup;
 			children = (
+				CEF61E4C2AF6BE1B003EA513 /* SplashScreen.swift */,
 				CE38E3C42AC8B0E700CB1C70 /* InteracaoEntreTelas.swift */,
 				CE36ECB72ABA6C2C00160C98 /* ContentView.swift */,
 				CE38E3C22AC8B01400CB1C70 /* TelaCadastro.swift */,
 				CEF510922AD216BC000C6010 /* TelaHome.swift */,
 				CE7BB52A2ADF459C00DC9DFF /* TabBar.swift */,
-				CEE25BB42AE893C000A9E924 /* TesteView.swift */,
 				CEF510942AD21FE7000C6010 /* TelaPerfil.swift */,
 				CEF510962AD2238A000C6010 /* TelaPesquisa.swift */,
 				CE350DA42ADF662A00B8630D /* SearchBar.swift */,
@@ -222,10 +224,10 @@
 				CE36ECB62ABA6C2C00160C98 /* AppPrecoFacilApp.swift in Sources */,
 				CE350DA52ADF662A00B8630D /* SearchBar.swift in Sources */,
 				CE9F17312AE4B31300D6894E /* TermosUso.swift in Sources */,
-				CEE25BB52AE893C000A9E924 /* TesteView.swift in Sources */,
 				CE582FC82AD239A1007D4485 /* TelaConfiguracoes.swift in Sources */,
 				CEAD40BC2AEDDC300088E26E /* Cart.swift in Sources */,
 				CE582FC62AD23982007D4485 /* TelaMercadosParceiros.swift in Sources */,
+				CEF61E4D2AF6BE1B003EA513 /* SplashScreen.swift in Sources */,
 				CE38E3C32AC8B01400CB1C70 /* TelaCadastro.swift in Sources */,
 				CE7BB52B2ADF459C00DC9DFF /* TabBar.swift in Sources */,
 				CEAD40B62AEDC3F70088E26E /* MinhaLista.swift in Sources */,

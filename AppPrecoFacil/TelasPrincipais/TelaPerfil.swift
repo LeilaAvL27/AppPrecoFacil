@@ -9,50 +9,55 @@ import SwiftUI
 
 struct TelaPerfil: View {
     var body: some View {
+        
         NavigationStack {
-            
-            VStack {
+            ZStack{
+                // BACKGROUND PROFILE
+                Rectangle()
+                    .ignoresSafeArea()
+                    .foregroundColor(.orange)
+                    .frame( height: 160)
+                
                 ZStack{
-                    // BACKGROUND PROFILE
-                    Rectangle()
-                        .ignoresSafeArea()
-                        .foregroundColor(.orange)
-                        .frame( height: 160)
-                    
-                    VStack (alignment: .leading) {
-                        Image("profile")
+                    ZStack{
+                        Circle()
+                            .frame(width: 100, height: 100)
+                            .foregroundColor(.white)
+                            .padding(.bottom,31)
+                        
+                        Image("profileFoto")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 80, height: 80)
+                            .frame(width: 90, height: 90)
                             .clipShape(Circle())
-                            .padding(.bottom, 5) // Ajuste o espaçamento conforme necessário
-                        
-                        Text("Rick Morty")
-                            .font(.title3)
-                            .fontWeight(.bold)
+                            .padding(.bottom, 30) // Ajuste o espaçamento conforme necessário
                     }
-                }
-                            
-                        List {
-                            
-                            NavigationLink("Principal", destination: TabBar())
-                            NavigationLink("Minha Lista de Compras", destination: MinhaLista())
-                            NavigationLink("Mercados Parceiros", destination: TelaMercadosParceiros())
-                            NavigationLink("Configurações", destination: TelaConfiguracoes())
-                            Button(action: {
-                                // Fecha o aplicativo
-                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                            }) {
-                                Text("Sair")
-                                    .foregroundColor(.red)
-                            }
-                            
-                        }
-                    }
+                    
+                    Text("João Paulo")
+                        .font(.title3)
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .padding(.top,100)
+                    
                 }
             }
+             
+                
+            List {
+                
+                NavigationLink("Principal", destination: TabBar())
+                NavigationLink("Minha Lista de Compras", destination: MinhaLista())
+                NavigationLink("Mercados Parceiros", destination: TelaMercadosParceiros())
+                NavigationLink("Configurações", destination: TelaConfiguracoes())
+                NavigationLink("Sair", destination: ContentView())
+                    .foregroundColor(.red)
+            }
+            
         }
-  
+    }
+}
+
+
 struct TelaPerfil_Previews: PreviewProvider {
     static var previews: some View {
         TelaPerfil()

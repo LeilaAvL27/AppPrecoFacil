@@ -37,37 +37,15 @@ struct TelaHome: View {
             
             
             // DEFINICOES CAIXAS DE IMAGENS
-                .padding(.bottom, 250)
+                .padding(.bottom, 250) //distacia
+            
+            Text("PROMOÇÕES DA SEMANA")
+                .font(.title2)
+                .bold()
+                .foregroundColor(.orange)
+                .frame(width: 400, alignment: .leading)
+            
             ScrollView {
-                Text("PROMOÇÕES DA SEMANA")
-                    .font(.title2)
-                    .bold()
-                    .foregroundColor(.orange)
-                    .frame(width: 400, alignment: .leading)
-                
-                
-                // LazyVGrid(columns: gridItemLayout) {
-                //     ForEach(0..<21) { _ in
-                //      VStack {
-                //           Image("cafe")
-                //              .resizable()
-                //              .frame(maxWidth: .infinity, maxHeight: 100)
-                //  .frame(width: 118, height: 117) // Define as dimensões da imagem
-                //           .cornerRadius(22)
-                
-                //       Text("Café 3 Corações Extraforte - 250g")
-                //         .font(.system(size: 12, weight: .light, design: .serif))
-                
-                
-                //       }
-                //     }
-                //   }
-                // }
-                //   .padding([.horizontal], 24)
-                // }
-                //}
-                //}
-                
                 LazyVGrid(columns: colums, spacing: 30) {
                     ForEach(0..<items.count, id:\.self) {
                         item in

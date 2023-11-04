@@ -9,7 +9,6 @@ import SwiftUI
 
 struct InteracaoEntreTelas: View {
     var body: some View {
-       
         NavigationView {
             ContentView();
         }

@@ -14,10 +14,15 @@ struct TelaMercadosParceiros: View {
         List (1...4, id: \.self) { item in
             //SUPERMERCADO FORTALEZA
             HStack {
-                Image("fortaleza")
-                    .resizable()
-                    .clipShape(Circle())
-                    .frame(width: 60, height: 60)
+                ZStack{
+                    Circle()
+                        .frame(width: 62, height: 62)
+                        .foregroundColor(.gray)
+                    Image("fortaleza")
+                        .resizable()
+                        .clipShape(Circle())
+                        .frame(width: 60, height: 60)
+                }
                 VStack (alignment: .leading) {
                     Text("Supermercado Fortaleza")
                         .font(.system(size: 16, weight: .medium, design: .default))
@@ -41,10 +46,15 @@ struct TelaMercadosParceiros: View {
             
             //SUPERMERCADO MARACÁ
             HStack {
-                Image("maraca")
-                    .resizable()
-                    .clipShape(Circle())
-                    .frame(width: 60, height: 60)
+                ZStack{
+                    Circle()
+                        .frame(width: 62, height: 62)
+                        .foregroundColor(.gray)
+                    Image("maraca")
+                        .resizable()
+                        .clipShape(Circle())
+                        .frame(width: 60, height: 60)
+                }
                 VStack (alignment: .leading) {
                     Text("Supermercado Maracá")
                         .font(.system(size: 16, weight: .medium, design: .default))
@@ -68,10 +78,16 @@ struct TelaMercadosParceiros: View {
             
             //SUPERMERCADO SANTA LUCIA
             HStack {
-                Image("lucia")
-                    .resizable()
-                    .clipShape(Circle())
-                    .frame(width: 60, height: 60)
+                ZStack{
+                    Circle()
+                        .frame(width: 62, height: 62)
+                        .foregroundColor(.gray)
+                    
+                    Image("lucia")
+                        .resizable()
+                        .clipShape(Circle())
+                        .frame(width: 60, height: 60)
+                }
                 VStack (alignment: .leading){
                     Text("Supermercado Santa Lúcia")
                         .font(.system(size: 16, weight: .medium, design: .default))
@@ -95,10 +111,15 @@ struct TelaMercadosParceiros: View {
             
             //SUPERMERCADO FAVORITO
             HStack {
-                Image("favorito")
-                    .resizable()
-                    .clipShape(Circle())
-                    .frame(width: 60, height: 60)
+                ZStack{
+                    Circle()
+                        .frame(width: 62, height: 62)
+                        .foregroundColor(.gray)
+                    Image("favorito")
+                        .resizable()
+                        .clipShape(Circle())
+                        .frame(width: 60, height: 60)
+                }
                 VStack (alignment: .leading){
                     Text("Supermercado Favorito")
                         .font(.system(size: 16, weight: .medium, design: .default))
