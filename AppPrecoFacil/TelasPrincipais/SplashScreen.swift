@@ -22,13 +22,13 @@ struct SplashScreen: View {
                 ZStack{
                     Image("LogoPreco")
                         .resizable()
-                        .frame(width: 320, height: 300)
-                        .padding(.bottom, 320)
+                        .frame(width: 340, height: 300)
+                        .padding(.bottom, 360)
                     
                     Image("LogoLupa")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 150, height: 150)
+                        .frame(width: 200, height: 200)
                         .clipShape(Circle())
                 }
             }

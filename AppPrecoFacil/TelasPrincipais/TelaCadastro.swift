@@ -31,7 +31,7 @@ struct Tela_Cadastro: View {
                     .scale(1.7)
                     .foregroundColor(.white)
                     .frame(width: 70, height: 70)
-                    .padding(.bottom, 570)
+                    .padding(.bottom, 540)
                 
                 // DEFINICOES IMAGENS
                 VStack {
@@ -40,7 +40,7 @@ struct Tela_Cadastro: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 200, height: 150)
                         .clipShape(Circle())
-                        .padding(.bottom, 780)
+                        .padding(.bottom, 750)
                 }
                 
                 VStack {
@@ -49,11 +49,11 @@ struct Tela_Cadastro: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 95, height: 95)
                         .clipShape(Circle())
-                        .padding(.bottom, 570) // Ajuste o espaçamento conforme necessário
+                        .padding(.bottom, 540) // Ajuste o espaçamento conforme necessário
                 }
                 
                 Text ("FAÇA SEU CADASTRO")
-                    .font(.body)
+                    .font(.title2)
                     .bold()
                     .padding(.bottom, 320)
                     .foregroundColor(.black)
@@ -65,7 +65,7 @@ struct Tela_Cadastro: View {
                         .background(Color.gray.opacity(0.3))
                         .cornerRadius(30)
                         .border(.gray.opacity(0.05))
-                        .padding(.top, 150)
+                        .padding(.top, 200)
                         .padding(.bottom, 10)
                     
                     TextField("Insira seu email", text: $email)
@@ -105,6 +105,32 @@ struct Tela_Cadastro: View {
                     Text("OU")
                         .font(.callout)
                         .foregroundColor(.black)
+                    
+                    // BOTÃO GOOGLE
+                    Button{
+                      //  vm.signInWithGoogle()
+                    } label: {
+                        Text("Entre com o Google")
+                            .padding(.trailing)
+                            .foregroundColor(.white)
+                            .frame(width: 240, height: 50)
+                            .background(.blue.opacity(0.85))
+                            .cornerRadius(10)
+                            .overlay(
+                                HStack{
+                                    Spacer()
+                                    Image("google")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 30, height: 30)
+                                        .clipShape(Circle())
+                                        .foregroundColor(.white)
+                                        .font(.title2)
+                                        .padding(.horizontal, 0)
+                                        .padding(.trailing)
+                                }
+                            )
+                    }
                     
                 }
             }

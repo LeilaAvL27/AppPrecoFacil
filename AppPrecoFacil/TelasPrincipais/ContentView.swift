@@ -20,23 +20,20 @@ struct ContentView: View {
                     .scale(1.7)
                     .foregroundColor(.orange)
                     .frame(width: 600, height: 350) //largura, altura
-                    .padding(.bottom, 900)
-                
+                    .padding(.bottom, 890)
                 Circle()
                     .scale(1.7)
                     .foregroundColor(.white)
                     .frame(width: 70, height: 70)
                     .padding(.bottom, 500)
-                
                 VStack {
                     Image("LogoPreco")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 200, height: 150)
                         .clipShape(Circle())
-                        .padding(.bottom, 710)
+                        .padding(.bottom, 720)
                 }
-                
                 VStack {
                     Image("LogoLupa")
                         .resizable()
@@ -49,28 +46,36 @@ struct ContentView: View {
                 
                 // DEFINICOES PARTE INFERIOR
                 Text ("FAÇA SEU LOGIN")
-                    .font(.body)
+                    .font(.title2)
                     .bold()
-                    .padding(.bottom, 250)
+                    .padding(.bottom, 240)
                     .foregroundColor(.black)
                 
                 VStack {
                     TextField("Insira seu email ou usuario", text: $email)
                         .padding()
-                        .frame(width: 300, height: 50) // largura, altura
+                        .frame(width: 320, height: 50) // largura, altura
                         .background(Color.gray.opacity(0.3))
                         .cornerRadius(30)
                         .border(.gray.opacity(0.05))
-                        .padding(.top, 150)
-                        .padding(.bottom, 10)
-                    
-                    SecureField("Insira sua senha", text: $senha)
-                        .padding()
-                        .frame(width: 300, height: 50)
-                        .background(Color.gray.opacity(0.3))
-                        .cornerRadius(30)
-                        .border(.gray.opacity(0.05))
-                        .padding(.bottom, 10)
+                        .padding(.top, 260)
+                        .padding(.bottom, 0)
+                    ZStack{
+                        SecureField("Insira sua senha", text: $senha)
+                            .padding()
+                            .frame(width: 320, height: 50)
+                            .background(Color.gray.opacity(0.3))
+                            .cornerRadius(30)
+                            .border(.gray.opacity(0.05))
+                            .padding(.bottom)
+                        
+                        //BOTAO ESQUECEU A SENHA
+                        Text("Esqueceu a senha?")
+                            .font(.callout)
+                            .foregroundColor(.blue)
+                            .padding(.leading, 120)
+                            .padding(.top, 80)
+                    }
                     
                     NavigationLink(destination: TabBar()) {
                         Text("Entrar")
@@ -78,21 +83,43 @@ struct ContentView: View {
                             .frame(width: 200, height: 50)
                             .background(.black.opacity(0.85))
                             .cornerRadius(10)
+                            .padding(.top, 10)
                     }
-                    
-                    //BOTAO ESQUECEU A SENHA
-                    .padding()
-                    Text("Esqueceu a senha?")
-                        .font(.callout)
-                        .foregroundColor(.blue)
-                
-                    //BOTAO CADASTRE-SE
-                    NavigationLink("Cadastre-se", destination: Tela_Cadastro())
-                    
+               
                     .padding()
                     Text("OU")
                         .font(.callout)
                         .foregroundColor(.black)
+                    
+                    // BOTÃO GOOGLE
+                    Button{
+                      //  vm.signInWithGoogle()
+                    } label: {
+                        Text("Entre com o Google")
+                            .padding(.trailing)
+                            .foregroundColor(.white)
+                            .frame(width: 240, height: 50)
+                            .background(.blue.opacity(0.85))
+                            .cornerRadius(10)
+                            .overlay(
+                                HStack{
+                                    Spacer()
+                                    Image("google")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 30, height: 30)
+                                        .clipShape(Circle())
+                                        .foregroundColor(.white)
+                                        .font(.title2)
+                                        .padding(.horizontal, 0)
+                                        .padding(.trailing)
+                                }
+                            )
+                    }
+                            
+                    //BOTAO CADASTRE-SE
+                    NavigationLink("Não tem uma conta? Cadastre-se", destination: Tela_Cadastro())
+                        .padding(.top, 40)
                     
                 }
             }

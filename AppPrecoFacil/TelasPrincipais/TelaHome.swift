@@ -32,7 +32,7 @@ struct TelaHome: View {
                     .padding(.horizontal, 20)
                     .padding(.bottom, 20)
             }
-            
+            // LEITOR DE CÓDIGO DE BARRAS 
             ZStack{
                 Rectangle()
                     .frame(width: 300, height: 220)
