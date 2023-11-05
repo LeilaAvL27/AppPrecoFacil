@@ -41,6 +41,7 @@ struct TelaPesquisa: View {
                 Spacer()
             }
         }
+        .padding(.bottom, 700)
     }
 }
 

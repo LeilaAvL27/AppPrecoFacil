@@ -33,7 +33,7 @@ struct TelaPerfil: View {
                             .padding(.bottom, 30) // Ajuste o espaçamento conforme necessário
                     }
                     
-                    Text("João Paulo")
+                    NavigationLink("João Paulo", destination: InfoTela())
                         .font(.title3)
                         .foregroundColor(.white)
                         .fontWeight(.bold)
@@ -44,7 +44,6 @@ struct TelaPerfil: View {
              
                 
             List {
-                
                 NavigationLink("Principal", destination: TabBar())
                 NavigationLink("Minha Lista de Compras", destination: MinhaLista())
                 NavigationLink("Mercados Parceiros", destination: TelaMercadosParceiros())

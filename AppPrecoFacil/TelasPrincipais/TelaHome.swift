@@ -7,23 +7,20 @@
 
 import SwiftUI
 
-
 struct TelaHome: View {
     
+    @State var goToInfo = false
     @State var goToCart = false
     @State var field = ""
-    
     var colums = [
         GridItem(.flexible()),
         GridItem(.flexible()),
         GridItem(.flexible()),
     ]
-  //  private var gridItemLayout = [GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
     
     var items: [[Any]] = shopItem
     
     var body: some View {
-        
         // DEFINICOES BARRA DE PESQUISA
         VStack {
             // Image(systemName: "")
@@ -33,12 +30,26 @@ struct TelaHome: View {
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(30)
                 .border(.gray.opacity(0.05))
+                .padding(.bottom, 30)
             
-            
-            
+            ZStack{
+                Rectangle()
+                    .frame(width: 300, height: 220)
+                    .foregroundColor(.orange)
+                    .cornerRadius(22)
+                
+                Image(systemName: "qrcode.viewfinder")
+                    .font(.system(size: 120))
+                    .foregroundColor(.black)
+                    .padding(.bottom, 10)
+                
+                NavigationLink("Leitor de Código de Barra", destination: TelaHome())
+                    .padding(.top, 160)
+                    .foregroundColor(.white)
+                    .bold()
+            }
             // DEFINICOES CAIXAS DE IMAGENS
-                .padding(.bottom, 250) //distacia
-            
+            .padding(.bottom, 30) // distacia
             Text("PROMOÇÕES DA SEMANA")
                 .font(.title2)
                 .bold()
@@ -51,8 +62,11 @@ struct TelaHome: View {
                         item in
                         ShopItem(imageName: items[item][0] as! String, title: items[item][1] as! String, price: items[item][2] as! Double, color: items[item][3] as! Color, selfIndex: item)
                     }
+                    
                 }
-            } .padding(15)
+                
+            } .padding(10) //MARGEM CARDS
+            
         }
         .navigationDestination(isPresented: $goToCart) {
             Cart()
@@ -67,9 +81,10 @@ struct TelaHome: View {
                         }
                     }
             
-        }
+        } .padding(15)  //MARGEM DE TODA A TELA
     }
 }
+
 struct TelaHome_Previews: PreviewProvider {
     static var previews: some View {
         TelaHome()
