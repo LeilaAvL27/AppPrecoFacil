@@ -55,7 +55,7 @@ struct ContentView: View {
                     .foregroundColor(.black)
                 
                 VStack {
-                    TextField("Insira seu email", text: $email)
+                    TextField("Insira seu email ou usuario", text: $email)
                         .padding()
                         .frame(width: 300, height: 50) // largura, altura
                         .background(Color.gray.opacity(0.3))

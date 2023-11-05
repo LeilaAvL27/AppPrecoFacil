@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TelaHome: View {
     
-    @State var goToInfo = false
     @State var goToCart = false
     @State var field = ""
     var colums = [
@@ -23,14 +22,16 @@ struct TelaHome: View {
     var body: some View {
         // DEFINICOES BARRA DE PESQUISA
         VStack {
-            // Image(systemName: "")
-            TextField("Pesquise seu produto aqui",text:$field)
-                .padding()
-                .frame(width: 370, height: 50) //largura , altura
-                .background(Color.gray.opacity(0.3))
-                .cornerRadius(30)
-                .border(.gray.opacity(0.05))
-                .padding(.bottom, 30)
+            HStack{
+                //Image(systemName: "magnifyingglass")
+                TextField("Pesquise seu produto aqui",text:$field)
+                    .padding(12)
+                    .padding(.horizontal, 10)
+                    .background(Color(.systemGray5))
+                    .cornerRadius(22)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 20)
+            }
             
             ZStack{
                 Rectangle()

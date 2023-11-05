@@ -35,19 +35,19 @@ struct InfoTela: View {
                         }
                 }
                 List {
-                    NavigationLink("Nome de Usuario", destination: InfoTela())
+                    NavigationLink("João Paulo", destination: InfoTela())
                         .font(.title3)
-                        .foregroundColor(.black)
+                        .foregroundColor(.blue)
                         .fontWeight(.bold)
                        
-                    NavigationLink("Email", destination: InfoTela())
+                    NavigationLink("joaopaulo@gmail.com", destination: InfoTela())
                         .font(.title3)
                         .foregroundColor(.black)
                         .fontWeight(.bold)
                     
-                    NavigationLink("Senha", destination: InfoTela())
+                    NavigationLink("Trocar senha", destination: InfoTela())
                         .font(.title3)
-                        .foregroundColor(.black)
+                        .foregroundColor(.blue)
                         .fontWeight(.bold)
                 }
                 
