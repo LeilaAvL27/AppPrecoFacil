@@ -32,6 +32,12 @@ struct InfoTela: View {
                                 .frame(width: 90, height: 90)
                                 .clipShape(Circle())
                                 .padding(.bottom, 20) // Ajuste o espaçamento conforme necessário
+                            
+                            NavigationLink("Alterar Foto", destination: InfoTela())
+                                .font(.callout)
+                                .foregroundColor(.blue)
+                                .fontWeight(.bold)
+                                .padding(.top, 110)
                         }
                 }
                 List {
