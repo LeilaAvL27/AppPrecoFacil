@@ -48,6 +48,7 @@ struct TelaHome: View {
                     .padding(.top, 160)
                     .foregroundColor(.white)
                     .bold()
+                
             }
             // DEFINICOES CAIXAS DE IMAGENS
             .padding(.bottom, 30) // distacia

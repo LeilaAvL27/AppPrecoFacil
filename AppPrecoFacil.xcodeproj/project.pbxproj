@@ -31,6 +31,7 @@
 		CEF510972AD2238A000C6010 /* TelaPesquisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF510962AD2238A000C6010 /* TelaPesquisa.swift */; };
 		CEF61E4D2AF6BE1B003EA513 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF61E4C2AF6BE1B003EA513 /* SplashScreen.swift */; };
 		CEF61E4F2AF70C42003EA513 /* InfoTela.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF61E4E2AF70C42003EA513 /* InfoTela.swift */; };
+		CEF61E552AFB1B8E003EA513 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF61E542AFB1B8E003EA513 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		CEF510962AD2238A000C6010 /* TelaPesquisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPesquisa.swift; sourceTree = "<group>"; };
 		CEF61E4C2AF6BE1B003EA513 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		CEF61E4E2AF70C42003EA513 /* InfoTela.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTela.swift; sourceTree = "<group>"; };
+		CEF61E542AFB1B8E003EA513 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				CEF510942AD21FE7000C6010 /* TelaPerfil.swift */,
 				CEF61E4E2AF70C42003EA513 /* InfoTela.swift */,
 				CEF510962AD2238A000C6010 /* TelaPesquisa.swift */,
+				CEF61E542AFB1B8E003EA513 /* SearchView.swift */,
 				CE350DA42ADF662A00B8630D /* SearchBar.swift */,
 				CEAD40B52AEDC3F70088E26E /* MinhaLista.swift */,
 				CEAD40B22AEDBB5A0088E26E /* ListaDeCompras */,
@@ -234,6 +237,7 @@
 				CE38E3C32AC8B01400CB1C70 /* TelaCadastro.swift in Sources */,
 				CEF61E4F2AF70C42003EA513 /* InfoTela.swift in Sources */,
 				CE7BB52B2ADF459C00DC9DFF /* TabBar.swift in Sources */,
+				CEF61E552AFB1B8E003EA513 /* SearchView.swift in Sources */,
 				CEAD40B62AEDC3F70088E26E /* MinhaLista.swift in Sources */,
 				CE582FCA2AD239B2007D4485 /* TelaSair.swift in Sources */,
 				CEF510952AD21FE7000C6010 /* TelaPerfil.swift in Sources */,
@@ -373,6 +377,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppPrecoFacil/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Necessário para escanear códigos de barras";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -401,6 +406,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppPrecoFacil/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Necessário para escanear códigos de barras";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

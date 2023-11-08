@@ -23,7 +23,7 @@ struct TabBar: View {
                     Text("Minha Lista")
                 }
             
-            TelaPesquisa (text: .constant(""))
+            SearchView ()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Pesquisar")
