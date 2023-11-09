@@ -18,8 +18,8 @@ struct TelaPerfil: View {
                     .foregroundColor(.orange)
                     .frame( height: 160)
                 
-                ZStack(alignment: .trailing){
-                    ZStack(alignment: .trailing){
+                ZStack{
+                    ZStack{
                         //Circle()
                            // .frame(width: 100, height: 100)
                           //  .foregroundColor(.white)
@@ -31,9 +31,7 @@ struct TelaPerfil: View {
                             .frame(width: 90, height: 90)
                             .clipShape(Circle())
                             //.shadow(radius: 10)
-                            .padding(.bottom, 30)
-                            .padding(.leading, 16) // Ajuste o espaçamento conforme necessário
-                         
+                            .padding(.bottom, 30) // Ajuste o espaçamento conforme necessário
                     }
                     
                     NavigationLink("João Paulo", destination: ProfileInfoView())
@@ -43,7 +41,7 @@ struct TelaPerfil: View {
                         .padding(.top,100)
                        
                 }
-                .padding(.trailing, 270)
+                
             }
              
                 
