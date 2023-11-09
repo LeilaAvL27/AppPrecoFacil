@@ -38,7 +38,7 @@ struct ItemDetailView: View {
                 .bold()
                 .foregroundColor(.black)
                 .padding(10)
-                
+            
             Text("R$ \(item.price, specifier: "%.2f")")
                 .font(.largeTitle)
                 .foregroundColor(.black)
@@ -46,11 +46,27 @@ struct ItemDetailView: View {
                 .padding(10)
             
             Text("Supermercado Fortaleza")
-               
-               
-        }.padding(.bottom, 300)
+            
+            // Adicionando o botão "Adicionar ao Carrinho"
+            Button(action: {
+                // Ação a ser realizada quando o botão for tocado
+                // Por exemplo, adicionar o item ao carrinho de compras
+            }) {
+                Text("Adicionar ao Carrinho")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(15)
+            }
+            .padding(.bottom, 100)
+        }        
+        
+        
+        
     }
 }
+
 
 // Sua View principal
 struct SearchView: View {
