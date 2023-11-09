@@ -18,28 +18,32 @@ struct TelaPerfil: View {
                     .foregroundColor(.orange)
                     .frame( height: 160)
                 
-                ZStack{
-                    ZStack{
-                        Circle()
-                            .frame(width: 100, height: 100)
-                            .foregroundColor(.white)
-                            .padding(.bottom,31)
+                ZStack(alignment: .trailing){
+                    ZStack(alignment: .trailing){
+                        //Circle()
+                           // .frame(width: 100, height: 100)
+                          //  .foregroundColor(.white)
+                          //  .padding(.bottom,31)
                         
                         Image("profileFoto")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 90, height: 90)
                             .clipShape(Circle())
-                            .padding(.bottom, 30) // Ajuste o espaçamento conforme necessário
+                            //.shadow(radius: 10)
+                            .padding(.bottom, 30)
+                            .padding(.leading, 16) // Ajuste o espaçamento conforme necessário
+                         
                     }
                     
-                    NavigationLink("João Paulo", destination: InfoTela())
+                    NavigationLink("João Paulo", destination: ProfileInfoView())
                         .font(.title3)
                         .foregroundColor(.white)
                         .fontWeight(.bold)
                         .padding(.top,100)
-                    
+                       
                 }
+                .padding(.trailing, 270)
             }
              
                 
@@ -51,7 +55,7 @@ struct TelaPerfil: View {
                 NavigationLink("Sair", destination: ContentView())
                     .foregroundColor(.red)
             }
-            
+            .font(.title3)
         }
     }
 }

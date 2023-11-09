@@ -3,44 +3,97 @@
 //  AppPrecoFacil
 //
 //  Created by user on 07/11/23.
-//
+
 import SwiftUI
 
-// Estrutura de dados para os itens que você deseja pesquisar, agora incluindo um preço.
+// Presumindo que a variável 'shopItem' e a cor estão acessíveis aqui
+// Se não estiverem, você teria que importar o arquivo ou módulo onde eles estão definidos.
+
+// Atualiza a estrutura Item para incluir as novas propriedades
 struct Item: Identifiable {
-    var id = UUID()
-    var name: String
-    var price: Double // Atributo de preço adicionado
+    let id = UUID()
+    let identifier: String
+    let description: String
+    let price: Double
+    let color: Color
+    
+}
+
+// View de detalhes para cada item
+struct ItemDetailView: View {
+    var item: Item
+    
+    var body: some View {
+        VStack {
+            Image("cafe")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 210, height: 260)
+                .clipShape(Rectangle())
+                .cornerRadius(10)
+                .padding(10)
+            
+            Text(item.description)
+                .font(.title)
+                .bold()
+                .foregroundColor(.black)
+                .padding(10)
+                
+            Text("R$ \(item.price, specifier: "%.2f")")
+                .font(.largeTitle)
+                .foregroundColor(.black)
+                .bold()
+                .padding(10)
+            
+            Text("Supermercado Fortaleza")
+               
+               
+        }.padding(.bottom, 300)
+    }
 }
 
 // Sua View principal
 struct SearchView: View {
-    @State private var searchQuery = "" // O texto de pesquisa
-    // Seus dados mockados, agora incluindo preços
-    let allItems: [Item] = [
-        Item(name: "Apple", price: 1.99),
-        Item(name: "Banana", price: 0.99),
-        Item(name: "Cherry", price: 2.99),
-        Item(name: "Banana Verde", price: 0.80),
-    ]
+    @State private var searchQuery = ""
+    @State private var allItems: [Item] = []
     
     // Filtro que retorna os itens correspondentes à pesquisa
     var filteredItems: [Item] {
-        allItems.filter { searchQuery.isEmpty || $0.name.lowercased().contains(searchQuery.lowercased()) }
+        allItems.filter { searchQuery.isEmpty || $0.description.localizedCaseInsensitiveContains(searchQuery) }
             .sorted { $0.price < $1.price } // Ordena os itens pelo preço
     }
     
     var body: some View {
         NavigationView {
             List(filteredItems) { item in
-                HStack {
-                    Text(item.name)
-                    Spacer()
-                    Text("R$\(item.price, specifier: "%.2f")") // Exibe o preço com duas casas decimais
+                NavigationLink(destination: ItemDetailView(item: item)) {
+                    HStack {
+                        Text(item.description)
+                        Spacer()
+                        Text("R$ \(item.price, specifier: "%.2f")")
+                            .foregroundColor(item.color)
+                    }
                 }
             }
             .navigationTitle("Items")
-            .searchable(text: $searchQuery, prompt: "Search for an item")
+            .searchable(text: $searchQuery)
+            .onAppear {
+                loadItems()
+            }
+        }
+    }
+    
+    // Carrega os itens diretamente da variável 'shopItem' definida em 'Dados.swift'
+    private func loadItems() {
+        // A conversão é feita aqui diretamente do 'shopItem'
+        allItems = shopItem.compactMap { array in
+            if let identifier = array[0] as? String,
+               let description = array[1] as? String,
+               let price = array[2] as? Double,
+               let color = array[3] as? Color {
+                return Item(identifier: identifier, description: description, price: price, color: color)
+            }
+            return nil
         }
     }
 }
