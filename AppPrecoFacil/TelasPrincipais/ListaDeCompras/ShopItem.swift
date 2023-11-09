@@ -53,6 +53,6 @@ struct ShopItem: View {
 
 struct ShopItem_Previews: PreviewProvider {
     static var previews: some View {
-        ShopItem(imageName: "omo", title: "Sabão em Pó", price: 8.00, color: Color.red, selfIndex: 0)
+        ShopItem(imageName: "omo", title: "Sabão em Pó 1L - OMO", price: 8.00, color: Color.black, selfIndex: 0)
     }
 }

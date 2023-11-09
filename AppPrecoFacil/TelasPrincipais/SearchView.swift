@@ -6,17 +6,12 @@
 
 import SwiftUI
 
-// Presumindo que a variável 'shopItem' e a cor estão acessíveis aqui
-// Se não estiverem, você teria que importar o arquivo ou módulo onde eles estão definidos.
-
-// Atualiza a estrutura Item para incluir as novas propriedades
 struct Item: Identifiable {
     let id = UUID()
     let identifier: String
     let description: String
     let price: Double
     let color: Color
-    
 }
 
 // View de detalhes para cada item
@@ -25,48 +20,46 @@ struct ItemDetailView: View {
     
     var body: some View {
         VStack {
+            Text("Supermercado Fortaleza")
+                .font(.title)
+                .padding(10)
+            
             Image("cafe")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 210, height: 260)
+                .frame(width: 210, height: 250)
                 .clipShape(Rectangle())
-                .cornerRadius(10)
+                .cornerRadius(15)
                 .padding(10)
             
             Text(item.description)
-                .font(.title)
+                .font(.title2)
                 .bold()
                 .foregroundColor(.black)
-                .padding(10)
-            
-            Text("R$ \(item.price, specifier: "%.2f")")
+               
+            Text("Por R$ \(item.price, specifier: "%.2f")")
                 .font(.largeTitle)
                 .foregroundColor(.black)
                 .bold()
                 .padding(10)
             
-            Text("Supermercado Fortaleza")
-            
-            // Adicionando o botão "Adicionar ao Carrinho"
             Button(action: {
-                // Ação a ser realizada quando o botão for tocado
-                // Por exemplo, adicionar o item ao carrinho de compras
+                // Ação para adicionar o item a minha lista
             }) {
-                Text("Adicionar ao Carrinho")
+                Text("Adicionar a minha lista")
                     .font(.headline)
+                    .frame(width: 280, height: 20)
                     .foregroundColor(.white)
                     .padding()
                     .background(Color.black)
-                    .cornerRadius(15)
+                    .cornerRadius(10)
+                    .padding(.top, 90)
             }
-            .padding(.bottom, 100)
-        }        
-        
-        
+            .padding(.bottom, 100) // Ajuste de altura de ItemDetail
+        }
         
     }
 }
-
 
 // Sua View principal
 struct SearchView: View {
@@ -87,11 +80,11 @@ struct SearchView: View {
                         Text(item.description)
                         Spacer()
                         Text("R$ \(item.price, specifier: "%.2f")")
-                            .foregroundColor(item.color)
+                            .foregroundColor(.blue)
                     }
                 }
             }
-            .navigationTitle("Items")
+            .navigationTitle("Pesquisa")
             .searchable(text: $searchQuery)
             .onAppear {
                 loadItems()
@@ -101,7 +94,6 @@ struct SearchView: View {
     
     // Carrega os itens diretamente da variável 'shopItem' definida em 'Dados.swift'
     private func loadItems() {
-        // A conversão é feita aqui diretamente do 'shopItem'
         allItems = shopItem.compactMap { array in
             if let identifier = array[0] as? String,
                let description = array[1] as? String,
@@ -114,7 +106,6 @@ struct SearchView: View {
     }
 }
 
-// Preview da sua interface
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView()
