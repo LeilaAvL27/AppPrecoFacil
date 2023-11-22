@@ -8,6 +8,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    
     @State var email: String = ""
     @State var senha: String = ""
     
@@ -21,16 +22,16 @@ struct ContentView: View {
                     .foregroundColor(.orange)
                     .frame(width: 600, height: 350) //largura, altura
                     .padding(.bottom, 890)
-                Circle()
-                    .scale(1.7)
-                    .foregroundColor(.white)
-                    .frame(width: 70, height: 70)
-                    .padding(.bottom, 500)
+                //Circle()
+                  //  .scale(1.7)
+                    //.foregroundColor(.white)
+                   // .frame(width: 70, height: 70)
+                   // .padding(.bottom, 500)
                 VStack {
                     Image("LogoPreco")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 200, height: 150)
+                        .frame(width: 220, height: 160)
                         .clipShape(Circle())
                         .padding(.bottom, 720)
                 }
@@ -38,11 +39,10 @@ struct ContentView: View {
                     Image("LogoLupa")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 97, height: 97)
+                        .frame(width: 130, height: 130)
                         .clipShape(Circle())
                         .padding(.bottom, 500) // Ajuste o espaçamento conforme necessário
                 }
-                
                 
                 // DEFINICOES PARTE INFERIOR
                 Text ("FAÇA SEU LOGIN")
@@ -56,16 +56,17 @@ struct ContentView: View {
                         .padding()
                         .frame(width: 320, height: 50) // largura, altura
                         .background(Color.gray.opacity(0.3))
-                        .cornerRadius(30)
+                        .cornerRadius(22)
                         .border(.gray.opacity(0.05))
-                        .padding(.top, 260)
+                        .padding(.top, 200)
                         .padding(.bottom, 0)
+                    
                     ZStack{
                         SecureField("Insira sua senha", text: $senha)
                             .padding()
                             .frame(width: 320, height: 50)
                             .background(Color.gray.opacity(0.3))
-                            .cornerRadius(30)
+                            .cornerRadius(22)
                             .border(.gray.opacity(0.05))
                             .padding(.bottom)
                         
@@ -85,41 +86,20 @@ struct ContentView: View {
                             .cornerRadius(10)
                             .padding(.top, 10)
                     }
-               
-                    .padding()
-                    Text("OU")
-                        .font(.callout)
-                        .foregroundColor(.black)
-                    
-                    // BOTÃO GOOGLE
-                    Button{
-                      //  vm.signInWithGoogle()
-                    } label: {
-                        Text("Entre com o Google")
-                            .padding(.trailing)
-                            .foregroundColor(.white)
-                            .frame(width: 240, height: 50)
-                            .background(.blue.opacity(0.85))
-                            .cornerRadius(10)
-                            .overlay(
-                                HStack{
-                                    Spacer()
-                                    Image("google")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 30, height: 30)
-                                        .clipShape(Circle())
-                                        .foregroundColor(.white)
-                                        .font(.title2)
-                                        .padding(.horizontal, 0)
-                                        .padding(.trailing)
-                                }
-                            )
-                    }
                             
                     //BOTAO CADASTRE-SE
                     NavigationLink("Não tem uma conta? Cadastre-se", destination: Tela_Cadastro())
-                        .padding(.top, 40)
+                        .padding(.top, 30)
+                    
+                    
+                        .padding()
+                    HStack{
+                        Image(systemName:"rectangle.portrait.and.arrow.forward")
+                        NavigationLink("Acessar como Visitante", destination: TelaHome())
+                            .foregroundColor(.black)
+                            .bold()
+                            
+                    }
                     
                 }
             }

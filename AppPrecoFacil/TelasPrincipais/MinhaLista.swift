@@ -16,7 +16,7 @@ struct MinhaLista: View {
         VStack {
             Text("Minha Lista")
                 .font(.system(size:40, weight: .semibold,design: .rounded))
-                .frame(width: 350, alignment: .leading)
+                .frame(width: 380, alignment: .center)
             
             //DEFINICOES ITENS DA LISTA
             List {

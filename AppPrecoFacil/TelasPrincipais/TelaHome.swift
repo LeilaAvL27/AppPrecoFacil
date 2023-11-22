@@ -10,7 +10,7 @@ import SwiftUI
 struct TelaHome: View {
     
     @State var goToCart = false
-    @State var field = ""
+    @State var text = ""
     var colums = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -24,39 +24,51 @@ struct TelaHome: View {
         VStack {
             HStack{
                 //Image(systemName: "magnifyingglass")
-                TextField("Pesquise seu produto aqui",text:$field)
-                    .padding(12)
+                TextField("Pesquise seu produto aqui", text: $text)
+                    .padding(12) // altura da barra
                     .padding(.horizontal, 10)
                     .background(Color(.systemGray5))
                     .cornerRadius(22)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 20)
+                    .padding(.horizontal, 20) //largura da barra
+                    .padding(.bottom, 20) // distancia da barra
                 
+                Button(action: {
+                    text = ""
+                    // Aqui você pode realizar ações quando o botão de cancelar é pressionado
+                }) {
+                    Text("Cancelar")
+                }
+                .padding(.trailing, 3)
+                .padding(.bottom)
+                .font(.callout)
+                .transition(.move(edge: .trailing))
             }
+            
+            
             // LEITOR DE CÓDIGO DE BARRAS 
             ZStack{
                 Rectangle()
-                    .frame(width: 300, height: 220)
+                    .frame(width: 285, height: 205)
                     .foregroundColor(.orange)
-                    .cornerRadius(22)
+                    .cornerRadius(20)
                 
                 Image(systemName: "qrcode.viewfinder")
-                    .font(.system(size: 120))
+                    .font(.system(size: 100))
                     .foregroundColor(.black)
                     .padding(.bottom, 10)
                 
                 NavigationLink("Leitor de Código de Barra", destination: TelaHome())
-                    .padding(.top, 160)
+                    .padding(.top, 140)
                     .foregroundColor(.white)
                     .bold()
                 
             }
             // DEFINICOES CAIXAS DE IMAGENS
-            .padding(.bottom, 30) // distacia
-            Text("PROMOÇÕES DA SEMANA")
+            .padding(.bottom, 30) // distancia
+            Text("OFERTAS DA SEMANA")
                 .font(.title2)
                 .bold()
-                .foregroundColor(.orange)
+                .foregroundColor(.black)
                 .frame(width: 400, alignment: .leading)
             
             ScrollView {

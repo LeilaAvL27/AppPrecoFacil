@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ProfileInfoView: View {
     
-      @State private var username = "Joao Paulo"
-      @State private var email = "JoaoPaulo@gmail.com"
+      @State private var username = "Joao Santos"
+      @State private var email = "JoaoSantos@gmail.com"
       @State private var newPassword = ""
       @State private var profileImage: UIImage? = UIImage(named: "profileFoto")
       @State private var showImagePicker = false
@@ -19,7 +19,7 @@ struct ProfileInfoView: View {
             
         Form{
             VStack(alignment: .center){
-                Image("profileFoto")
+                Image(systemName: "person.crop.circle.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 90, height: 90)
@@ -30,11 +30,11 @@ struct ProfileInfoView: View {
             }
             HStack{
                 Image(systemName: "person")
-                Text("Joao Paulo")
+                Text("Fulano de Tal")
             }
             HStack{
                 Image(systemName: "envelope")
-                Text("JoaoPaulo@gmail.com")
+                Text("fulanodetal@gmail.com")
             }
             HStack{
                 Image(systemName: "key")

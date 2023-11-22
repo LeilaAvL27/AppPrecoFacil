@@ -10,10 +10,9 @@ import SwiftUI
 struct TelaConfiguracoes: View {
     var body: some View {
         List {
-            
+            NavigationLink("Detalhes do Perfil", destination: ProfileInfoView())
+            NavigationLink("Termos de Uso e Política de Privacidade", destination: TermosUso())
             NavigationLink("Sobre Nós", destination: SobreNos())
-            NavigationLink("Termos de Uso", destination: TermosUso())
-            NavigationLink("Apagar Conta", destination: ApagarConta())
           
         }
         

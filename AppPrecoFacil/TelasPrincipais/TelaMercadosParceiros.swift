@@ -11,23 +11,23 @@ import SafariServices
 struct TelaMercadosParceiros: View {
     
     var body: some View {
-        List (1...4, id: \.self) { item in
+        List (1...2, id: \.self) { item in
             //SUPERMERCADO FORTALEZA
             HStack {
                 ZStack{
                     Circle()
-                        .frame(width: 62, height: 62)
+                        .frame(width: 64, height: 64)
                         .foregroundColor(.gray)
                     Image("fortaleza")
                         .resizable()
                         .clipShape(Circle())
-                        .frame(width: 60, height: 60)
+                        .frame(width: 62, height: 62)
                 }
                 VStack (alignment: .leading) {
                     Text("Supermercado Fortaleza")
                         .font(.system(size: 16, weight: .medium, design: .default))
                     Text("Seg a Sáb: 7:00 às 21:00")
-                    Text("Dom: 7:00 às 13:00")
+                    Text("Dom e Feriados: 7:00 às 13:00")
                     
                     //SAIBA MAIS
                     Button(action: {
@@ -48,18 +48,18 @@ struct TelaMercadosParceiros: View {
             HStack {
                 ZStack{
                     Circle()
-                        .frame(width: 62, height: 62)
+                        .frame(width: 64, height: 64)
                         .foregroundColor(.gray)
                     Image("maraca")
                         .resizable()
                         .clipShape(Circle())
-                        .frame(width: 60, height: 60)
+                        .frame(width: 62, height: 62)
                 }
                 VStack (alignment: .leading) {
                     Text("Supermercado Maracá")
                         .font(.system(size: 16, weight: .medium, design: .default))
                     Text("Seg a Sáb: 7:00 às 21:00")
-                    Text("Dom: 7:00 às 13:00")
+                    Text("Dom e Feriados: 7:00 às 13:00")
                   
                     //SAIBA MAIS
                     Button(action: {
@@ -80,19 +80,19 @@ struct TelaMercadosParceiros: View {
             HStack {
                 ZStack{
                     Circle()
-                        .frame(width: 62, height: 62)
+                        .frame(width: 64, height: 64)
                         .foregroundColor(.gray)
                     
                     Image("lucia")
                         .resizable()
                         .clipShape(Circle())
-                        .frame(width: 60, height: 60)
+                        .frame(width: 62, height: 62)
                 }
                 VStack (alignment: .leading){
                     Text("Supermercado Santa Lúcia")
                         .font(.system(size: 16, weight: .medium, design: .default))
                     Text("Seg a Sáb: 7:00 às 21:00")
-                    Text("Dom: 7:00 às 13:00")
+                    Text("Dom e Feriados: 7:00 às 13:00")
                     
                     //SAIBA MAIS
                     Button(action: {
@@ -113,18 +113,18 @@ struct TelaMercadosParceiros: View {
             HStack {
                 ZStack{
                     Circle()
-                        .frame(width: 62, height: 62)
+                        .frame(width: 64, height: 64)
                         .foregroundColor(.gray)
                     Image("favorito")
                         .resizable()
                         .clipShape(Circle())
-                        .frame(width: 60, height: 60)
+                        .frame(width: 62, height: 62)
                 }
                 VStack (alignment: .leading){
                     Text("Supermercado Favorito")
                         .font(.system(size: 16, weight: .medium, design: .default))
                     Text("Seg a Sáb: 7:00 às 21:00")
-                    Text("Dom: 7:00 às 13:00")
+                    Text("Dom e Feriados: 7:00 às 13:00")
                     
                     //SAIBA MAIS
                     Button(action: {

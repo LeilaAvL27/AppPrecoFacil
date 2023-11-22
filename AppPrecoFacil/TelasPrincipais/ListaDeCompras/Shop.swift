@@ -22,11 +22,8 @@ struct Shop: View {
     var body: some View {
         VStack(spacing: 5){
             VStack {
-                Text("Bom dia")
-                Text("Ordem dos Itens")
-                Spacer().frame(height: 75)
                 Text("Itens")
-                    .frame(width: 320, alignment: .leading)
+                    .frame(width: 400, alignment: .leading)
                     .foregroundColor(.black)
                     .bold()
                 

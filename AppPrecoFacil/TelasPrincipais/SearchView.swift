@@ -17,7 +17,6 @@ struct Item: Identifiable {
 // View de detalhes para cada item
 struct ItemDetailView: View {
     var item: Item
-    
     var body: some View {
         VStack {
             Text("Supermercado Fortaleza")
@@ -45,20 +44,22 @@ struct ItemDetailView: View {
             
             Button(action: {
                 // Ação para adicionar o item a minha lista
+                cartItems.append(["cafe",item.description,item.price,Color.black])
             }) {
-                Text("Adicionar a minha lista")
+                Text("Adicionar à minha lista")
                     .font(.headline)
-                    .frame(width: 280, height: 20)
+                    .frame(width: 220, height: 20)
                     .foregroundColor(.white)
                     .padding()
-                    .background(Color.black)
-                    .cornerRadius(10)
-                    .padding(.top, 90)
+                    .background(Color.orange)
+                    .cornerRadius(20)
+                    .padding(.top, 40)
             }
-            .padding(.bottom, 100) // Ajuste de altura de ItemDetail
+            .padding(.bottom, 100) // Ajuste de altura do quadro de informacao
         }
-        
+       
     }
+    
 }
 
 // Sua View principal
@@ -73,22 +74,29 @@ struct SearchView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack{
+            
             List(filteredItems) { item in
-                NavigationLink(destination: ItemDetailView(item: item)) {
-                    HStack {
-                        Text(item.description)
-                        Spacer()
-                        Text("R$ \(item.price, specifier: "%.2f")")
-                            .foregroundColor(.blue)
+                if !searchQuery.isEmpty{
+                    NavigationLink(destination: ItemDetailView(item: item)) {
+                        HStack {
+                            Text(item.description)
+                            Spacer()
+                            Text("R$ \(item.price, specifier: "%.2f")")
+                                .foregroundColor(.blue)
+                        }
                     }
+                   
                 }
+               
+                
             }
-            .navigationTitle("Pesquisa")
-            .searchable(text: $searchQuery)
-            .onAppear {
-                loadItems()
-            }
+            .navigationTitle("Pesquisar")
+        }
+       
+        .searchable(text: $searchQuery)
+        .onAppear {
+            loadItems()
         }
     }
     

@@ -25,16 +25,17 @@ struct TelaPerfil: View {
                           //  .foregroundColor(.white)
                           //  .padding(.bottom,31)
                         
-                        Image("profileFoto")
+                        Image(systemName: "person.crop.circle.fill")
                             .resizable()
+                            .foregroundColor(.white)
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 90, height: 90)
+                            .frame(width: 80, height: 80)
                             .clipShape(Circle())
                             //.shadow(radius: 10)
                             .padding(.bottom, 30) // Ajuste o espaçamento conforme necessário
                     }
                     
-                    NavigationLink("João Paulo", destination: ProfileInfoView())
+                    Text("Fulano de Tal")
                         .font(.title3)
                         .foregroundColor(.white)
                         .fontWeight(.bold)
@@ -53,7 +54,7 @@ struct TelaPerfil: View {
                 NavigationLink("Sair", destination: ContentView())
                     .foregroundColor(.red)
             }
-            .font(.title3)
+            
         }
     }
 }
