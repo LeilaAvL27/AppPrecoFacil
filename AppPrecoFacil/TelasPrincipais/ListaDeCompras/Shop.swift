@@ -41,16 +41,16 @@ struct Shop: View {
         .navigationDestination(isPresented: $goToCart) {
             Cart()
         }
-        .toolbar{
-            ToolbarItem(placement:
-                    .navigationBarTrailing)  {
-                        Button() {
-                            goToCart = true
-                        } label: {
-                            Image(systemName: "cart")
-                        }
-                    }
-        }
+        //.toolbar{
+          //  ToolbarItem(placement:
+            //        .navigationBarTrailing)  {
+              //          Button() {
+                //            goToCart = true
+                  //      } label: {
+                    //        Image(systemName: "cart")
+                      //  }
+             //       }
+       // }
     }
     
     struct Shop_Previews: PreviewProvider {

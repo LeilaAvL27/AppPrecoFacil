@@ -95,7 +95,7 @@ struct ContentView: View {
                         .padding()
                     HStack{
                         Image(systemName:"rectangle.portrait.and.arrow.forward")
-                        NavigationLink("Acessar como Visitante", destination: TelaHome())
+                        NavigationLink("Acessar como Visitante", destination: TabBar())
                             .foregroundColor(.black)
                             .bold()
                             

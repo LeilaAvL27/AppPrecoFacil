@@ -86,19 +86,19 @@ struct TelaHome: View {
         .navigationDestination(isPresented: $goToCart) {
             Cart()
         }
-        .toolbar{
-            ToolbarItem(placement:
-                    .navigationBarTrailing)  {
-                        Button() {
-                            goToCart = true
-                        } label: {
-                            Image(systemName: "cart")
-                        }
-                    }
+       // .toolbar{
+       //     ToolbarItem(placement:
+         //           .navigationBarTrailing)  {
+          //              Button() {
+           //                 goToCart = true
+            //            } label: {
+             //               Image(systemName: "cart")
+              //          }
+              //      }
             
-        } .padding(15)  //MARGEM DE TODA A TELA
+        }//.padding(15)  //MARGEM DE TODA A TELA
     }
-}
+//}
 
 struct TelaHome_Previews: PreviewProvider {
     static var previews: some View {
