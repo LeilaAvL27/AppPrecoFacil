@@ -8,7 +8,6 @@
 > O App que vai ajudá-lo a economizar tempo e dinheiro na hora de comprar produtos essenciais. Com o Preço Fácil, você pode acessar informações sobre os preços de diversos produtos, desde alimentos até itens de higiene pessoal. 
 
 ## 🎥 DEMO
-https://github.com/yago-marques/WeCare/assets/84297648/c504d956-131e-4e8d-8e5f-a7f1b78063db
 
 ## 👩🏾‍💻 Technologies
 - [x] SwiftUI
